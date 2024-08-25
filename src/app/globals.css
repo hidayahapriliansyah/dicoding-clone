@@ -71,3 +71,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.swiper-container {
+  width: 100%;
+}
