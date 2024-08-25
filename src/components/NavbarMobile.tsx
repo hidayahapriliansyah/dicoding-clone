@@ -1,6 +1,6 @@
 'use client'
 
-import { Briefcase, Calendar, CreditCard, MoveUpRight, Rocket, Search, X } from 'lucide-react';
+import { Briefcase, Calendar, CreditCard, Gift, MessageCircleCode, MoveUpRight, Rocket, Search, X } from 'lucide-react';
 import Image from 'next/image'
 import React, { useRef, useState } from 'react'
 import { Button } from './ui/button';
@@ -13,6 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import clsx from 'clsx';
+import InputNav from './InputNav';
 
 
 const NavbarMobile = () => {
@@ -20,7 +21,7 @@ const NavbarMobile = () => {
   const ref = useRef(null);
 
   return (
-    <nav className='relative py-4 px-8 flex justify-between items-center h-[66px] w-full'>
+    <nav className='lg:hidden relative py-4 px-8 flex justify-between items-center h-[66px] w-full'>
       <Image
         alt='Dicoding Indonesia'
         src={'/new-ui-logo.png'}
@@ -44,16 +45,8 @@ const NavbarMobile = () => {
         'translate-y-0 opacity-100': isOpen,
       })}>
         <div className='flex justify-between items-center p-6 w-full h-[98px]'>
-          <div className='relative w-[80%] h-[50px]'>
-            <Search className='absolute top-[18px] left-[15px] w-4 h-4 text-gray-400' />
-            <input
-              type="text"
-              name="cari-pelajaran"
-              id="cari-pelajaran"
-              aria-label='Apa yang ingin Anda pelajari?'
-              placeholder='Apa yang ingin Anda pelajari?'
-              className='py-[6px] pl-[40px] pr-[6x] outline-none ring-0 w-full h-full focus:border focus:border-primary transition-all duration-300 rounded-[4px] border border-input font-medium text-[0.9rem] text-gray-950'
-            />
+          <div className='relative w-[80%]'>
+            <InputNav />
           </div>
 
           <button
@@ -172,6 +165,26 @@ const NavbarMobile = () => {
                     <div className='w-full ml-4'>
                       <p className='text-[.9rem] font-bold'>Dicoding Event</p>
                       <span className='text-[.9rem]'>Ikuti event dan bangun jaringan developer.</span>
+                    </div>
+                  </Link>
+                  <Link
+                    href="#"
+                    className='flex items-center py-4 hover:bg-gray-200'
+                  >
+                    <MessageCircleCode className='w-4 h-4' />
+                    <div className='w-full ml-4'>
+                      <p className='text-[.9rem] font-bold'>Dicoding Mentoring</p>
+                      <span className='text-[.9rem]'>Tingkatkan skill dengan mentoring dengan expert.</span>
+                    </div>
+                  </Link>
+                  <Link
+                    href="#"
+                    className='flex items-center py-4 hover:bg-gray-200'
+                  >
+                    <Gift className='w-4 h-4' />
+                    <div className='w-full ml-4'>
+                      <p className='text-[.9rem] font-bold'>Reward</p>
+                      <span className='text-[.9rem]'>Tukarkan point dengan reward menarik.</span>
                     </div>
                   </Link>
                 </AccordionContent>

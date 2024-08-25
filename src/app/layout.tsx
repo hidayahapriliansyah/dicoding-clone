@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
 import NavbarMobile from '../components/NavbarMobile';
+import NavbarDesktop from '../components/NavbarDesktop';
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={quicksand.className}>
         <header className='w-full'>
           <NavbarMobile />
+          <NavbarDesktop />
         </header>
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
           {children}
