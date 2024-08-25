@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={quicksand.className}>
-        <header>
+        <header className='w-full'>
           <NavbarMobile />
         </header>
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
