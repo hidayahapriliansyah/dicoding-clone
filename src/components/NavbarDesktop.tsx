@@ -14,7 +14,7 @@ import { Briefcase, Calendar, CreditCard, Gift, MessageCircleCode, Rocket } from
 const NavbarDesktop = () => {
   return (
     <nav className='hidden fixed lg:block p-4 w-full shadow-sm'>
-      <div className='max-w-[1140px] mx-auto lg:flex lg:justify-between w-full gap-2'>
+      <div className='max-w-[1140px] 2xl:max-w-[1536px] mx-auto lg:flex lg:justify-between w-full gap-2'>
         <div className='flex gap-2 items-center'>
           <Image
             alt='Dicoding Indonesia'
