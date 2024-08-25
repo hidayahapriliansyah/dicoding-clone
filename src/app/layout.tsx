@@ -23,7 +23,7 @@ export default function RootLayout({
           <NavbarMobile />
           <NavbarDesktop />
         </header>
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>
         <footer>
