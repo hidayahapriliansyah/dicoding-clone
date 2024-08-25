@@ -21,7 +21,7 @@ const NavbarMobile = () => {
   const ref = useRef(null);
 
   return (
-    <nav className='lg:hidden relative py-4 px-8 flex justify-between items-center h-[66px] w-full'>
+    <nav className='lg:hidden fixed z-40 py-4 px-8 flex justify-between items-center h-[66px] w-full bg-white shadow-md'>
       <Image
         alt='Dicoding Indonesia'
         src={'/new-ui-logo.png'}
@@ -40,7 +40,7 @@ const NavbarMobile = () => {
         <div className='w-[24px] h-[2px] bg-primary group-focus-within:rotate-[350deg] transition-all duration-500'></div>
       </button>
 
-      <div className={clsx('fixed top-0 right-0 w-full h-[500px] bg-white transition-all duration-300', {
+      <div className={clsx('fixed top-0 right-0 z-50 w-full h-[500px] bg-white transition-all duration-300', {
         '-translate-y-[100%] opacity-50': !isOpen,
         'translate-y-0 opacity-100': isOpen,
       })}>
