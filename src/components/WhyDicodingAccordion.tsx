@@ -11,7 +11,6 @@ const WhyDicodingAccordion = () => {
   const [choosenFeature, setChoosenFeature] = useState<ItemValues>('item-1')
   const handleChangeValue = (value: ItemValues) => {
     if (value as unknown as string !== '') {
-      console.log('value bos', value)
       setChoosenFeature(value)
     }
   }
