@@ -1,7 +1,5 @@
 'use client'
 
-// components/CustomSlider.tsx
-
 import { FC, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
@@ -69,9 +67,10 @@ const CustomSlider: FC = () => {
             slidesPerView: 2
           },
           1024: {
-            slidesPerView: 1.1
+            slidesPerView: 1.2
           }
         }}
+        centeredSlides
         className="swiper-container mx-auto"
       >
         {newPrograms.map((program, i) => (
