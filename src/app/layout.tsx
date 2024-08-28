@@ -3,6 +3,7 @@ import { Quicksand } from "next/font/google";
 import "./globals.css";
 import NavbarMobile from '../components/NavbarMobile';
 import NavbarDesktop from '../components/NavbarDesktop';
+import Footer from '../components/Footer';
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -26,9 +27,7 @@ export default function RootLayout({
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>
-        <footer>
-
-        </footer>
+        <Footer />
       </body>
     </html>
   );
