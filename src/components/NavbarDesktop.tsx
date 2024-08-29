@@ -37,14 +37,15 @@ const NavbarDesktop = () => {
             </li>
 
             <li>
-              <HoverCard>
+              <HoverCard openDelay={0} closeDelay={0}>
                 <HoverCardTrigger
-                  className='flex justify-center items-center py-2 px-4 w-full h-[50px] text-primary-text font-bold hover:bg-gray-100 hover:cursor-pointer'
+                  className='flex justify-center items-center py-2 px-4 w-full h-[50px] text-primary-text font-bold hover:bg-gray-100 hover:cursor-pointer rounded-[4px]'
                 >
                   Langganan
                 </HoverCardTrigger>
                 <HoverCardContent
-                  className='p-0 rounded-[10px] shadow-md w-fit text-primary-text'
+                  align='start'
+                  className='p-0 rounded-[7px] shadow-md w-fit text-primary-text -mt-1 overflow-hidden'
                 >
                   <Link
                     href="#"
@@ -70,14 +71,15 @@ const NavbarDesktop = () => {
               </HoverCard>
             </li>
             <li>
-              <HoverCard>
+              <HoverCard openDelay={0} closeDelay={0}>
                 <HoverCardTrigger
-                  className='flex justify-center items-center p-4 w-full h-[50px] text-primary-text font-bold hover:bg-gray-100 hover:cursor-pointer'
+                  className='flex justify-center items-center p-4 w-full h-[50px] text-primary-text font-bold hover:bg-gray-100 hover:cursor-pointer rounded-[4px]'
                 >
                   Program
                 </HoverCardTrigger>
                 <HoverCardContent
-                  className='p-0 rounded-[10px] shadow-md w-fit text-primary-text'
+                  align='start'
+                  className='p-0 rounded-[7px] shadow-md w-fit text-primary-text -mt-1 overflow-hidden'
                 >
                   <Link
                     href="#"
@@ -95,14 +97,15 @@ const NavbarDesktop = () => {
               </HoverCard>
             </li>
             <li>
-              <HoverCard>
+              <HoverCard openDelay={0} closeDelay={0}>
                 <HoverCardTrigger
-                  className='flex justify-center items-center p-4 w-full h-[50px] text-primary-text font-bold hover:bg-gray-100 hover:cursor-pointer'
+                  className='flex justify-center items-center p-4 w-full h-[50px] text-primary-text font-bold hover:bg-gray-100 hover:cursor-pointer rounded-[4px]'
                 >
                   Lainnya
                 </HoverCardTrigger>
                 <HoverCardContent
-                  className='p-0 rounded-[10px] shadow-md w-fit text-primary-text'
+                  align='start'
+                  className='p-0 rounded-[7px] shadow-md w-fit text-primary-text -mt-1 overflow-hidden'
                 >
                   <Link
                     href="#"
