@@ -1,55 +1,63 @@
-import Image from 'next/image'
-import React from 'react'
-import Marquee from 'react-fast-marquee'
-import { clients } from '../data/clients'
+'use client'
+
+import Image from 'next/image';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, FreeMode } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/autoplay';
+// import 'swiper/css/free-mode';
+import { clients } from '../data/clients';
 
 const ClientMarquee = () => {
   return (
     <div className='lg:hidden mt-8 w-full px-4'>
-      <Marquee
-        speed={40}
-        className='mb-6 overflow-hidden'
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={'auto'}
+        speed={3000}
+        draggable
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false, // Mencegah jeda saat mouse berada di atas slide
+        }}
+        freeMode={true}
+        loop={true}
+        modules={[Autoplay, FreeMode]}
       >
-        {
-          clients.slice(0, 9).map((client, i) => (
-            <div
-              key={i}
-              className='flex items-center w-full max-w-[160px] h-[64px] py-2 border border-gray-300 rounded-sm mx-3'
-            >
-              <Image
-                alt={client.title}
-                src={client.imageLink}
-                width={180}
-                height={50}
-                className='p-8'
-              />
-            </div>
-          ))
-        }
-      </Marquee>
-      <Marquee
-        speed={40}
-        className='overflow-hidden'
-      >
-        {
-          clients.slice(8, 18).map((client, i) => (
-            <div
-              key={i}
-              className='flex items-center w-full max-w-[160px] h-[64px] py-2 border border-gray-300 rounded-sm mx-3'
-            >
-              <Image
-                alt={client.title}
-                src={client.imageLink}
-                width={180}
-                height={50}
-                className='p-8'
-              />
-            </div>
-          ))
-        }
-      </Marquee>
-    </div>
-  )
-}
+        {clients.map((client, i) => {
+          if (i % 2 !== 0) return null;
 
-export default ClientMarquee
+          return (
+            <SwiperSlide
+              key={i}
+              className='w-fit max-w-[140px] sm:max-w-[160px] h-[60px]'
+            >
+              <div className='flex justify-center items-center w-full h-full mb-[30px] py-2 border border-gray-300 rounded-sm'>
+                <Image
+                  alt={client.title}
+                  src={client.imageLink}
+                  width={109}
+                  height={46}
+                />
+              </div>
+              {clients[i + 1] && (
+                <div className='flex justify-center items-center w-full h-full mb-[30px] py-2 border border-gray-300 rounded-sm'>
+                  <Image
+                    alt={clients[i + 1].title}
+                    src={clients[i + 1].imageLink}
+                    width={109}
+                    height={46}
+                  />
+                </div>
+              )}
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </div>
+  );
+};
+
+export default ClientMarquee;
