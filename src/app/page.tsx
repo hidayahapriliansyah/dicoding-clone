@@ -6,6 +6,7 @@ import WhyDicoding from '../components/WhyDicoding';
 import LearningPath from '../components/LearningPath';
 import CTACreateAccount from '../components/CTACreateAccount';
 import DicodingNetwork from '../components/DicodingNetwork';
+import ReviewerAction from '../components/ReviewerAction';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <NewProgram />
       <WhyDicoding />
       <LearningPath />
+      <ReviewerAction />
       <DicodingNetwork />
       <CTACreateAccount />
     </>
