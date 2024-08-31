@@ -84,3 +84,8 @@
 .swiper-slide {
   overflow: visible;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: hsl(211, 28%, 25%) !important;
+  /* Warna titik-titik yang aktif */
+}

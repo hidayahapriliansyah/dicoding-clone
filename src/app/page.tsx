@@ -8,6 +8,7 @@ import CTACreateAccount from '../components/CTACreateAccount';
 import DicodingNetwork from '../components/DicodingNetwork';
 import ReviewerAction from '../components/ReviewerAction';
 import ClassLists from '../components/ClassLists';
+import TestimoniSiswa from '../components/TestimoniSiswa';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <ClassLists />
       <ReviewerAction />
       <DicodingNetwork />
+      <TestimoniSiswa />
       <CTACreateAccount />
     </>
   );
