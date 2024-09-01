@@ -5,7 +5,7 @@ import LearningPathOptions from './LearningPathOptions'
 const LearningPath = () => {
   return (
     <section className='text-primary-text w-full'>
-      <div className='w-full lg:max-w-[1140px] lg:pt-12 px-[15px] mx-auto'>
+      <div className='w-full max-w-[540px] md:max-w-[690px] lg:max-w-[930px] xl:max-w-[1140px] mx-auto'>
         <div className='w-full pt-[48px] px-[15px]'>
           <h2 className='mb-4 font-extrabold text-center text-2xl lg:text-[2rem]'>Learning Path</h2>
           <p className='mx-auto w-full sm:max-w-[510px] md:max-w-[450px] lg:max-w-[540px] font-[500] text-center'>Learning path akan membantu Anda dalam belajar di Academy dengan kurikulum yang dibangun bersama pelaku industri ternama.</p>

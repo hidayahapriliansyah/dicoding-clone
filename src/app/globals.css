@@ -89,3 +89,7 @@
   background-color: hsl(211, 28%, 25%) !important;
   /* Warna titik-titik yang aktif */
 }
+
+.swiper-slide.lpc-card {
+  @apply w-[66%] md:w-[70%] lg:w-[45%] xl:w-[38%] h-[410px] !important
+}

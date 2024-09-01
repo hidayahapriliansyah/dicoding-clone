@@ -12,7 +12,7 @@ const LearningPathOptionCard = ({ title, imgUrl, badge, path, selectedPath }: {
 }) => {
   return (
     <div
-      className={clsx('relative flex justify-center items-start w-full h-full bg-blue-400 transition-all duration-300 rounded-[5px] overflow-hidden hover:cursor-pointer hover:opacity-100', {
+      className={clsx('relative flex justify-center items-start h-full bg-blue-400 transition-all duration-300 rounded-[5px] overflow-hidden hover:cursor-pointer hover:opacity-100', {
         'opacity-100': path === selectedPath,
         'opacity-80': path !== selectedPath,
         'w-[350px]': path === selectedPath,

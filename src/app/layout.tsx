@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Inter, Quicksand } from "next/font/google";
 import "./globals.css";
 import NavbarMobile from '../components/NavbarMobile';
 import NavbarDesktop from '../components/NavbarDesktop';
 import Footer from '../components/Footer';
 
-const quicksand = Quicksand({ subsets: ["latin"] });
+const quicksand = Quicksand({ subsets: ["latin"], display: 'swap' });
 
 export const metadata: Metadata = {
   title: "Dicoding Indonesia - Bangun Karirmu Sebagai Developer Profesional Dicoding Indonesia",

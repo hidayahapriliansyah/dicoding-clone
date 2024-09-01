@@ -8,13 +8,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import LearningPathOptionCard from './LearningPathOptionCard';
 import { Swiper as SwiperType } from 'swiper/types';
 import { learningPaths, LearningPaths } from '../data/learning-paths';
+import LearningPathCourses from './LearningPathCourses';
 
 const LearningPathOptions = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   const [path, setPath] = useState<LearningPaths>('android')
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
-
 
   return (
     <div className='w-full'>
@@ -68,55 +68,78 @@ const LearningPathOptions = () => {
         </li>
       </ul>
 
-      <div className='flex justify-end gap-4 mr-4 mb-4'>
-        <button
-          className={clsx(
-            'flex justify-center items-center text-primary-text p-[1px] w-8 h-8 border-2 border-primary rounded-full',
-            {
-              'opacity-50 cursor-not-allowed': isBeginning,
-              'opacity-100': !isBeginning,
-            }
-          )}
-          onClick={() => swiperRef.current?.slidePrev()}
-          disabled={isBeginning}
-        >
-          <ArrowLeft className='m-0 p-0' />
-        </button>
-        <button
-          className={clsx(
-            'flex justify-center items-center text-primary-text p-[1px] w-8 h-8 border-2 border-primary rounded-full',
-            {
-              'opacity-50 cursor-not-allowed': isEnd,
-              'opacity-100': !isEnd
-            }
-          )}
-          onClick={() => swiperRef.current?.slideNext()}
-          disabled={isEnd}
-        >
-          <ArrowRight />
-        </button>
-      </div>
+      <div className='hidden md:block mb-4 w-full'>
+        <div className='hidden lg:flex lg:justify-end lg:gap-4 mr-4 mb-4'>
+          <button
+            className={clsx(
+              'flex justify-center items-center text-primary-text p-[1px] w-8 h-8 border-2 border-primary rounded-full',
+              {
+                'opacity-50 cursor-not-allowed': isBeginning,
+                'opacity-100': !isBeginning,
+              }
+            )}
+            onClick={() => swiperRef.current?.slidePrev()}
+            disabled={isBeginning}
+          >
+            <ArrowLeft className='m-0 p-0' />
+          </button>
+          <button
+            className={clsx(
+              'flex justify-center items-center text-primary-text p-[1px] w-8 h-8 border-2 border-primary rounded-full',
+              {
+                'opacity-50 cursor-not-allowed': isEnd,
+                'opacity-100': !isEnd
+              }
+            )}
+            onClick={() => swiperRef.current?.slideNext()}
+            disabled={isEnd}
+          >
+            <ArrowRight />
+          </button>
+        </div>
 
-      <Swiper
-        spaceBetween={16}
-        slidesPerView={'auto'}
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-        onSlideChange={(swiper) => {
-          setIsBeginning(swiper.isBeginning);
-          setIsEnd(swiper.isEnd);
-        }}
-        onReachBeginning={() => setIsBeginning(true)}
-        onReachEnd={() => setIsEnd(true)}
-        onFromEdge={() => {
-          setIsBeginning(false);
-          setIsEnd(false);
-        }}
-      >
-        {learningPaths.map((lpath, i) => (
+        <Swiper
+          spaceBetween={16}
+          slidesPerView={'auto'}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          onSlideChange={(swiper) => {
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
+          }}
+          onReachBeginning={() => setIsBeginning(true)}
+          onReachEnd={() => setIsEnd(true)}
+          onFromEdge={() => {
+            setIsBeginning(false);
+            setIsEnd(false);
+          }}
+        >
+          {learningPaths.map((lpath, i) => (
+            <SwiperSlide
+              key={i}
+              style={{
+                width: '100%',
+                height: '192px',
+                maxWidth: 'fit-content',
+                overflow: 'hidden',
+                transition: 'all',
+                transitionDuration: '0.3s'
+              }}
+              onClick={() => {
+                if (path !== lpath.path) setPath(lpath.path);
+              }}
+            >
+              <LearningPathOptionCard
+                imgUrl={lpath.imgUrl}
+                title={lpath.title}
+                badge={lpath.badge}
+                path={lpath.path}
+                selectedPath={path}
+              />
+            </SwiperSlide>
+          ))}
           <SwiperSlide
-            key={i}
             style={{
               width: '100%',
               height: '192px',
@@ -125,43 +148,26 @@ const LearningPathOptions = () => {
               transition: 'all',
               transitionDuration: '0.3s'
             }}
-            onClick={() => {
-              if (path !== lpath.path) setPath(lpath.path);
-            }}
           >
-            <LearningPathOptionCard
-              imgUrl={lpath.imgUrl}
-              title={lpath.title}
-              badge={lpath.badge}
-              path={lpath.path}
-              selectedPath={path}
-            />
+            <div
+              className='relative flex justify-center items-start w-full max-w-[220.5px] xl:max-w-[265.5px] h-full bg-blue-400 transition-all duration-150 rounded-[5px] overflow-hidden hover:cursor-pointer'
+            >
+              <Image
+                alt='Lihat lebih banyak learning path'
+                src={'/images/badge-more.png'}
+                width={510}
+                height={384}
+                quality={50}
+                className='h-full object-cover object-left'
+              />
+            </div>
           </SwiperSlide>
-        ))}
-        <SwiperSlide
-          style={{
-            width: '100%',
-            height: '192px',
-            maxWidth: 'fit-content',
-            overflow: 'hidden',
-            transition: 'all',
-            transitionDuration: '0.3s'
-          }}
-        >
-          <div
-            className='relative flex justify-center items-start w-full max-w-[220.5px] xl:max-w-[265.5px] h-full bg-blue-400 transition-all duration-150 rounded-[5px] overflow-hidden hover:cursor-pointer'
-          >
-            <Image
-              alt='Lihat lebih banyak learning path'
-              src={'/images/badge-more.png'}
-              width={510}
-              height={384}
-              quality={50}
-              className='h-full object-cover object-left'
-            />
-          </div>
-        </SwiperSlide>
-      </Swiper>
+        </Swiper>
+      </div>
+
+      <LearningPathCourses
+        selectedPath={path}
+      />
     </div>
   );
 }
