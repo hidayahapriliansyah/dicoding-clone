@@ -25,7 +25,6 @@ const ClientMarquee = () => {
       >
         {clients.map((client, i) => {
           if (i % 2 !== 0) return null;
-
           return (
             <SwiperSlide
               key={i}
