@@ -19,8 +19,8 @@ const DicodingNetwork = () => {
   };
 
   return (
-    <section className='w-full py-[50px] bg-gray-100 text-primary-text'>
-      <div className='relative w-full max-w-[540px] sm:max-w-[720px] lg:max-w-[1140px] mx-auto px-4'>
+    <section className='w-full py-[50px] lg:py-[100px] bg-gray-100 text-primary-text'>
+      <div className='relative w-full container'>
         <div className='w-full lg:max-w-[400px] xl:max-w-[475px]'>
           <h2 className='mb-2 font-medium text-2xl'>Bergabung dengan jaringan developer terbesar</h2>
           <p className='mb-4'>Selain belajar di Academy, Anda juga bisa mengikuti kegiatan dan layanan kami yang lain.</p>

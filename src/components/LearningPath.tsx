@@ -10,12 +10,12 @@ const LearningPath = () => {
 
   return (
     <section className='text-primary-text w-full'>
-      <div className='w-full max-w-[540px] md:max-w-[690px] lg:max-w-[930px] xl:max-w-[1140px] mx-auto'>
-        <div className='w-full pt-[48px] px-[15px]'>
+      <div className='w-full container'>
+        <div className='w-full pt-[48px]'>
           <h2 className='mb-4 font-extrabold text-center text-2xl lg:text-[2rem]'>Learning Path</h2>
           <p className='mx-auto w-full sm:max-w-[510px] md:max-w-[450px] lg:max-w-[540px] font-[500] text-center'>Learning path akan membantu Anda dalam belajar di Academy dengan kurikulum yang dibangun bersama pelaku industri ternama.</p>
         </div>
-        <div className='flex flex-wrap justify-center items-center gap-2 px-[15px] py-12'>
+        <div className='flex flex-wrap justify-center items-center gap-2 py-12'>
           <LoadingImage
             src={'/images/academy-googleatp-3.png'}
             placeholder={imgPlaceholder}
@@ -42,7 +42,7 @@ const LearningPath = () => {
           />
         </div>
 
-        <div className='flex flex-wrap justify-center items-center gap-6 px-[15px] mb-8 w-full'>
+        <div className='flex flex-wrap justify-center items-center gap-6 mb-8 w-full'>
           <div
             className='flex items-center w-full max-w-[160px] md:max-w-[180px] h-[50px] py-2 border border-gray-300 rounded-sm'
           >

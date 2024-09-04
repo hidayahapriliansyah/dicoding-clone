@@ -93,3 +93,7 @@
 .swiper-slide.lpc-card {
   @apply w-[66%] md:w-[70%] lg:w-[45%] xl:w-[38%] h-[410px] !important
 }
+
+.container {
+  @apply mx-auto px-[15px] max-w-[540px] md:max-w-[690px] lg:max-w-[930px] xl:max-w-[1140px]
+}

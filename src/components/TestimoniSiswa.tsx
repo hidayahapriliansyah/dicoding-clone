@@ -13,8 +13,8 @@ const TestimoniSiswa = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section className='py-[50px] w-full'>
-      <div className='mx-auto px-[15px] max-w-[540px] md:max-w-[690px] lg:max-w-[930px] xl:max-w-[1140px] w-full text-primary-text'>
+    <section className='pt-[50px] pb-[20px] lg:pt-[100px] lg:pb-[40px] w-full'>
+      <div className='container w-full text-primary-text'>
         <div className='flex justify-between mb-6 items-center w-full'>
           <h3 className='text-xl lg:text-3xl font-medium'>Testimoni Siswa</h3>
           <div className='flex justify-end gap-4'>

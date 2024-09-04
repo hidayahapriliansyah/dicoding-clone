@@ -34,7 +34,7 @@ const LearningPathCourses = ({ selectedPath }: { selectedPath: LearningPaths }) 
 
   return (
     <div
-      className='flex flex-col md:flex-row w-full pt-8 px-[16px] md:pb-8 md:pl-8 md:pr-0 bg-gray-100'
+      className='flex flex-col md:flex-row w-full pt-8 md:pb-8 md:pl-8 md:pr-0 bg-gray-100'
     >
       <div className='md:px-[15px] w-full md:max-w-[45%] lg:max-w-[40%] text-primary-text'>
         <h4 className='hidden md:inline-block my-4 lg:mb-4 lg:mt-12 font-bold text-2xl'>{lp.name}</h4>

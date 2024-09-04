@@ -9,7 +9,7 @@ const NewProgram = () => {
     <section
       className='py-12 w-full bg-gray-100'
     >
-      <div className='flex flex-col lg:flex-row w-full max-w-[1140px] mx-auto'>
+      <div className='flex flex-col lg:flex-row container'>
         <div className='px-[15px] mb-4 lg:mt-16 md:w-[690px] lg:w-[40%] mx-auto'>
           <h2 className='text-[1.5rem] lg:text-[2rem] lg:font-medium text-primary-text mb-2'>Program Terbaru Kami</h2>
           <p className='text-primary-text lg:max-w-[70%]'>Bekerja sama dengan partner, kami menyelenggarakan beberapa program untuk mendukung developer Indonesia.</p>
