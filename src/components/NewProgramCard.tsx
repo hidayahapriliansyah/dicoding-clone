@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
+import { LoadingImage } from './LoadingImage';
+import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props';
 
-const NewProgramCard = ({ description, imageLink, organizer, title }: {
-  imageLink: string;
+const NewProgramCard = ({ description, image, imgPlaceholder, organizer, title }: {
+  image: string;
+  imgPlaceholder: string;
   organizer: string;
   title: string;
   description: string;
@@ -14,9 +17,10 @@ const NewProgramCard = ({ description, imageLink, organizer, title }: {
       <div
         className='relative z-10 w-full lg:max-w-[168px] aspect-square'
       >
-        <Image
+        <LoadingImage
           alt={title}
-          src={imageLink}
+          src={`/images/${image}`}
+          placeholder={imgPlaceholder as PlaceholderValue}
           fill
           className='object-contain overflow-hidden'
         />

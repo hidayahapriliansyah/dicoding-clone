@@ -51,6 +51,7 @@ const TestimoniSiswa = () => {
                   completedClass={testi.completedClass}
                   description={testi.description}
                   image={testi.image}
+                  imgPlaceholder={testi.imgPlaceholder}
                   name={testi.name}
                   profession={testi.profession}
                 />

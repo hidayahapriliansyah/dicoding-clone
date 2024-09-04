@@ -81,7 +81,6 @@ const LearningPathCourses = ({ selectedPath }: { selectedPath: LearningPaths }) 
           </button>
         </div>
         <Swiper
-          spaceBetween={18}
           slidesPerView={'auto'}
           shortSwipes={true}  // Mengaktifkan respons swipe pendek
           onSwiper={(swiper) => {
@@ -103,10 +102,14 @@ const LearningPathCourses = ({ selectedPath }: { selectedPath: LearningPaths }) 
               <SwiperSlide
                 key={i}
                 className='lpc-card border border-gray-300 rounded-[10px] md:rounded-[4px]'
+                style={{
+                  marginLeft: i === 0 ? '' : '18px'
+                }}
               >
                 <LearningPathCourseCard
                   hours={course.hours}
                   imgUrl={course.image}
+                  imgPlaceholder={course.imgPlaceholder}
                   level={course.level}
                   rating={course.rating}
                   step={course.step}

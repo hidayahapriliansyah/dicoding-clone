@@ -45,6 +45,7 @@ const SwiperCourseDesktop = () => {
             >
               <CourseCard
                 image={course.image}
+                imgPlaceholder={course.imgPlaceholder}
                 link={course.link}
                 title={course.title}
               />
@@ -52,6 +53,7 @@ const SwiperCourseDesktop = () => {
                 courses[i + 1] &&
                 <CourseCard
                   image={courses[i + 1].image}
+                  imgPlaceholder={courses[i + 1].imgPlaceholder}
                   link={courses[i + 1].link}
                   title={courses[i + 1].title}
                 />

@@ -1,34 +1,51 @@
 export type LearningPaths = 'android' | 'fe' | 'be' | 'ml' | 'ios';
 
-export const learningPaths: { title: string; imgUrl: string; path: LearningPaths, badge: string; }[] = [
-  {
-    title: 'Android Developer',
-    imgUrl: '/images/android-lp.jpg',
-    path: 'android',
-    badge: '/images/badge-android.png'
-  },
-  {
-    title: 'Back-End Developer',
-    imgUrl: '/images/be-lp.jpg',
-    path: 'be',
-    badge: '/images/badge-be.png'
-  },
-  {
-    title: 'Front-End Web Developer',
-    imgUrl: '/images/fe-lp.jpg',
-    path: 'fe',
-    badge: '/images/badge-fe.png'
-  },
-  {
-    title: 'iOS Developer',
-    imgUrl: '/images/ios-lp.jpg',
-    path: 'ios',
-    badge: '/images/badge-ios.png'
-  },
-  {
-    title: 'Machine Learning Engineer',
-    imgUrl: '/images/ml-lp.jpg',
-    path: 'ml',
-    badge: '/images/badge-ml.png'
-  },
-]
+export const learningPaths: {
+  title: string;
+  imgUrl: string;
+  imgPlaceholder: string;
+  path: LearningPaths;
+  badge: string;
+  badgePlaceholder: string;
+}[] = [
+    {
+      title: 'Android Developer',
+      imgUrl: '/images/android-lp.jpg',
+      imgPlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAACfElEQVR4AQBBAL7/AFJOT/9NSkv/S0tL/1VXWf9pbW//eoCC/4CHiv99hIf/eoGD/36Dhf+Fhoj/hIGC/3Nsa/9TSUj/MSUj/xwOC/8AQQC+/wBKSkv/Q0RF/z9CQ/9GS03/Vl1g/2Rucf9qdXj/aHN3/2lzdv9xeXz/fIGD/3+Agf9xbm//VU9O/zYtLP8iGBf/AEEAvv8AQUhL/zhAQ/8wOTz/MTxA/ztJTf9FVlv/SVth/0pcYv9OYGX/XGtw/215ff91foH/bXJ0/1dYWv89PD3/LCkq/wBBAL7/AEBQVf80Rkv/JztA/yI4Pv8mPkb/LEZO/y5KUv8vS1T/NlJa/0hiav9ddHv/an6E/2d3fP9XY2j/QkxQ/zQ9QP8AQQC+/wBFYWn/OFZe/ylJUv8gQ0z/IEVP/yFJU/8gSlX/IUtW/ylSXf87Y27/UXaA/2CBi/9gfob/VG52/0NcY/84UFb/AEEAvv8ASXN//z5pdf8vXGn/JlZk/yVYZv8lWmn/Ilpp/yFZaP8nX27/N258/0t/jf9YiZb/WYaS/095hf9CanX/OmFr/wBBAL7/AEZ9i/88dYT/Mmx8/y1qev8ubn//L3KE/y1yhP8qcIP/LnSG/zp/kf9KjJ3/VJOj/1OPn/9LhJP/QXeG/ztwfv8AQQC+/wA7fI7/NXeJ/y90hv8vd4r/NYCT/zmHm/84iJ3/NYab/zeHnf9Aj6T/S5it/1KcsP9Ql6r/SY2f/0GClP88fI3/AUEAvv8AMnmM/y52if8rdYn/L3yR/ziInv8/kqj/P5Sr/zyTqf88k6r/Q5mv/02gtv9Rorf/T5yw/0iSpv9BiZz/PYOW/zNfMplVjnghAAAAAElFTkSuQmCC',
+      path: 'android',
+      badge: '/images/badge-android.png',
+      badgePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEZklEQVR4AQBBAL7/ABuhowAcoKMAHZ+jAB+dowAhm6MLI5mjDySYowoll6MEJZejASSYowIjmaMCIZujAB+dowAdn6MAHKCjABuhowAAQQC+/wAboaMAHKCjAB2fowEfnaMeIZujMSOZozckmKMzJZejLSWXoyokmKMqI5mjKCGbox4fnaMHHZ+jABygowAboaMAAEEAvv8AG6GjAhygoxYdn6M3H52jVyGbo24jmaN4JJijdiWXo3Ell6NuJJijbCOZo2chm6NZH52jPh2foxscoKMAG6GjAABBAL7/ABugozEcoKNHHp6jbB+do5Ehm6OuI5mjvCWXo74ll6O6JZejtiSXo7IjmaOpIZujlh+do3YdnqNPHKCjKhuhoxMAQQC+/wAcoKNNHKCjZh6eo48gnKO6Ipqj3COZo/All6P2JZaj9CWWo+8ll6PpI5mj3CGbo8QfnKOfHp6jcxygo0sboaMyAEEAvv8AHKCjUB2fo2wenqOZIJyjyiKao/IjmKP/JZej/yaWo/8mlqP/JZej/yOZo/ghmqPbH5yjsx6eo4McoKNXG6CjPQBBAL7/ABygo0Idn6NfHp6jkSCco8cimqP0I5ij/yWXo/8mlqP/JZaj/yWXo/8jmaP/IZuj4R+do7UenqODHKCjVRuhozsAQQC+/wAcoKMwHJ+jTx6eo4MgnKO9Ipqj7iOZo/8ll6P/JZej/yWXo/8kl6P/I5mj/yGbo+AfnaOzHZ+jfxygo1EboaM2AEEAvv8AG6CjJRygo0UenqN7H52jtiGbo+ojmaP/JJij/yWXo/8ll6P/JJij/yOZo/8hm6PgH52jsx2fo4EboKNTG6GjOQBBAL7/ABuhoyUcoKNFHZ+jex+do7Yhm6PpI5mj/ySYo/8ll6P/JJej/ySYo/8imqP/IJyj4R6eo7ccoKOHG6GjXBqio0IAQQC+/wAboaMpG6GjSB2fo3wenqO1IJyj5SKao/8jmaP/JJij/ySYo/8jmaP/Ipqj9yCco90enqO3HKCjihqio2IaoqNKAEEAvv8AGqKjJBuho0IcoKNzHp6jqSCco9UhmqPwI5mj+iOZo/kjmaP0Ipqj7CGbo94fnaPIHZ+jphuho34aoqNZGaOjQwBBAL7/ABmjoxAaoqMsG6CjWh2fo4sfnaOyIZujyCKao84jmaPKI5mjwyKao7sgnKOwHp6jnRygo4EaoqNdGaOjPBikoygAQQC+/wAZo6MAGqKjCBuhozMdn6NgH52jgiCco5IimqOUIpqjjSKao4Qhm6N9IJyjdB6eo2QcoKNMGqKjLBikow4YpKMAAEEAvv8AGKOjABmjowAboaMKHKCjNB6eo1IgnKNeIZujXCKao1MimqNJIZujQh+dozodn6MtG6GjFxmjowAYpKMAF6WjAAFBAL7/ABikowAZo6MAGqKjABygoxgenqM0IJyjPiGbozoimqMvIZqjJSGbox4fnaMXHZ+jCxuhowAZo6MAGKSjABelowBHYNfSXN0Z1AAAAABJRU5ErkJggg==',
+    },
+    {
+      title: 'Back-End Developer',
+      imgUrl: '/images/be-lp.jpg',
+      imgPlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAACfElEQVR4AQBBAL7/AA4UJ/8PFSf/FBgo/xweK/8kIy7/KCUt/ykkKf8uJyr/PjY3/1pRUf94b2//jIOD/46Fhf9/d3j/bGRm/15XWP8AQQC+/wAXHjD/GB4w/xwhMf8jJjT/Kis2/y4tNP8vKzD/My4x/0I8Pf9cVVX/d3Bw/4iBgf+HgYL/eHJz/2ReYP9WUVP/AEEAvv8AHyo8/yAqO/8jLDz/KjE+/zE2Qf81OD//Njc8/zo5PP9HRkf/Xlxd/3Vzc/+Bf4H/fXx+/2xrbv9YV1v/SkpO/wBBAL7/AB0xQv8eMUL/IjND/yo5Rv8yP0r/NkJK/zlDSP89Rkr/SlJU/15lZ/9xeHr/eYGE/3J7f/9gam7/TFZc/0BKUP8AQQC+/wARMkT/EzNE/xg3Rv8gPkv/KkZR/zJMVP82TlX/PFNZ/0hfZP9acHX/aYCF/26Gi/9mf4X/VW52/0NdZv85U1z/AEEAvv8AAjVH/wQ3SP8KPEz/FUVT/yFQXP8qV2H/MV1l/zhjav9EbnT/U32E/1+Kkf9hjZb/WYWP/0l3gv87aXX/MmFu/wBBAL7/AABAU/8AQlT/Akla/w5TYv8cX2z/Jmhz/y1ueP80dH3/PX2G/0mJkv9Sk53/UpSf/0mMmf88gI7/MHWE/ypvf/8AQQC+/wAAUGT/AFNm/wJabP8PZXX/HHF//yZ6h/8sf4v/MYOO/ziKlf9Bk57/Rpml/0OYpf86j5//LoWW/yV8jv8geIv/AUEAvv8AAFxx/wBfc/8FZ3n/EXKD/x5+jf8ohpT/LYqX/zGNmf82kp7/PJml/z6cqv86maj/MJGh/yWHmf8df5P/GXyQ/4IhHj+K/H6OAAAAAElFTkSuQmCC',
+      path: 'be',
+      badge: '/images/badge-be.png',
+      badgePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEZklEQVR4AQBBAL7/AAiOjgAMjo4AFI2PABuJjAAggocAInh/ACFudwAhaHIAImhyACRveAAmeIAAJoKJACKKjgAcjpEAFZCRABGQkAAAQQC+/wAKkI8AD5CQABaOkAAdiY0IIYGHFyJ3fhsibXYXIWdxEiJncRIkbXcXJnd/GyaCiBgjio4JHY6RABeQkQASkJEAAEEAvv8AD5KSABSRkgoaj5EoIIqORiOAhlojdX1hImp0XyBkblwhZG5cJGp0YCZ1fWIngIdbJYmOSB+OkSwZkJIPFZCRAABBAL7/ABWUlCsZk5RAHpCSYiOJjoUlf4WeJHJ7qyFmcK0fX2qrIF9qqyNmcKwmcXqrKH2FoCaHjIgijZFoHJCSSBmRkjQAQQC+/wAalZZMHZSVZCKPk4olh42yJnyD0iNud+MgYWzpHVpl6B5aZechYWzmJW124Ch6gtAnhYuzJIyQjh+PkmsckJJVAEEAvv8AHpWXVCCTlm4kjpKYJoWLxiV4gOsiaXP/HVxn/xtUYP8bU2D/H1tn/yRocvkndn7kKIKIwiWKj5ghjpFxHpCSWgBBAL7/ACCUl0oikpVlJYyQkyaCiMQkdHztIGRu/xtWYv8YTlv/GE5b/xxWYv8iZG/4JnN83iiAh7gmiI6LIo2RYSCPkkgAQQC+/wAgk5Y5IpGUViWKj4YlgIa6I3F65R5hbP8ZU1//FktY/xZLWP8bVGD6IWJt6SZxeswof4ajJoiNdCONkUkhj5IwAEEAvv8AIJOVLyKQk0wkio58JH+GsSJxedwdYWv3GFNe/xVLWP8WTFj4G1Rg7CFjbdkmcnu7KICHkSeJjmEjjpI3IZCTHQBBAL7/AB+Uli0hkZRKI4uPeiSAh60icnrXHmNt8BlVYfgWTlr0GE9b6xxYZN8iZnDMJ3Z+rymDiYcnjJFZI5GULyGSlRYAQQC+/wAelZctIJKVSSONkXckg4moI3Z+zx9nceUbWmXqGVRf5RpVYdsfXmnPJWx2vil7g6Qqh41/J4+UVSOUli4glZcXAEEAvv8AHJeYIx6Vlz4ikJNqJIeMmCR7grwhbXbOHmFr0BxbZskeXGe/ImVvtCdyfKYrgYiRKoyRcSeTl0wil5kpHpiZFABBAL7/ABqZmQodl5gjIZOVTCSLj3clgIaXI3N7pSBocqUfYm2cIWRukiVsdoopeYGALIaNcCqQlVYll5k2IJmaGByamgUAQQC+/wAXmpoAG5mZAB+VlyEjjpJJJYSKZSR4gHEjbnduImlyZCRqdFsncnxVK36GTyyLkEQqlJgwJJmbFR2bmwAZm5sAAEEAvv8AFpuaABmamgAel5gAI5CUGyWHjDUlfIM+JHJ7OiRtdy8lb3gnKXd/IyyCiSEsjpMZKZaZCiKanAAbm5wAFpubAAFBAL7/ABSbmgAYmpoAHpeZACOSlQAliI4XJn6FHyV0fRokcHkPJnF6Byl5gQQshIsELI+UACiXmgAhm5wAGZycABWbmwAZRo1ZLigAJgAAAABJRU5ErkJggg==',
+    },
+    {
+      title: 'Front-End Web Developer',
+      imgUrl: '/images/fe-lp.jpg',
+      imgPlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAACfElEQVR4AQBBAL7/AHxcRf+IZ1L/lHRh/5l4aP+TdGj/jG1l/4ZpZf+BZ2b/eWJj/21aXf9kVVn/YFRZ/1tTWP9PS1D/PjxA/zAwNP8AQQC+/wBqSTL/dVQ+/4JgTf+FY1T/f15S/3dXT/9xU07/bVFP/2RMTf9ZREf/UD9D/0w/Q/9IP0P/Pzg8/y8rLv8iHyL/AEEAvv8AUzId/148Kf9pSDb/a0o7/2VEOf9dPTX/WDo1/1Q4N/9MNDT/Qiwu/zkoKv82KCv/NCot/y0mKP8fGhz/FBAS/wBBAL7/AEMqGP9NNCP/WD4v/1pANP9UOjH/TTQu/0ozMP9IMzP/QzAx/zkpLP8wJSj/LiYp/y4pK/8pJyn/Hh4f/xUWF/8AQQC+/wA9NSj/Rz8y/1FJPv9US0P/UEdC/0tDQf9MRUX/TUhL/0pHS/9BQUb/ODxB/zU8QP81P0P/Mj9B/yk4Ov8hMTP/AEEAvv8AN0pD/0FUTv9MXlr/UGJg/05gYP9NYGP/UmVq/1dsc/9VbHT/TGZu/0JfZ/89XGT/O15k/zddYv8vVlv/KFBU/wBBAL7/AClbW/8zZWX/PnBy/0R1ef9EdXv/R3iB/0+Bi/9Xipb/VouY/0yDkP8/eYX/NnN+/zFxe/8rbXb/ImZt/xpfZv8AQQC+/wASYWb/HWtx/yl2fv8vfIb/MX6K/zeDkf9Bjp7/S5mq/0ubrP8/kaL/LoOT/yF4h/8YcoD/D2x4/wRjbf8AW2X/AUEAvv8AAWBp/wxqdP8YdoH/H32K/yJ/j/8phpf/NZKl/z+dsf8/nrL/MZOn/x6Dlf8Odof/A218/wBkcv8AWmb/AFJe/3kXF4K+Z42NAAAAAElFTkSuQmCC',
+      path: 'fe',
+      badge: '/images/badge-fe.png',
+      badgePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEZklEQVR4AQBBAL7/AA6fpQAQnqQAFJyiABmaoAAel50LJJSaDyiSmAoqkZcEKpGXASmSmAIllJoCIZacAByYngAXm6EAE5yjABKdpAAAQQC+/wAOn6UAEJ6kABScogEZmqAeH5edMSSUmjcokpgzKpGXLSuRlyopkpgqJpOaKCGWnB4cmJ4HF5uhABScogASnaMAAEEAvv8AD5+lAhGepBYVnKI3GpmfVx+XnW4klJp4KJKYdiuRl3ErkZduKZKYbCaTmWchlpxZHJiePhiaoBsUnKIAEp2jAABBAL7/AA+fpTERnqRHFZyibBqZn5EglpyuJZSavCmSmL4rkZe6K5CXtiqRl7Imk5mpIpWblh2YnnYYmqBPFJyiKhKdoxMAQQC+/wAQnqRNEp2jZhaboY8bmZ+6IJac3CWUmvApkpj2LJCW9CyQlu8qkZfpJ5OZ3CKVm8QdmJ6fGJqgcxWcoksTnaMyAEEAvv8AEJ6kUBKdo2wWm6GZG5mfyiGWnPImk5n/KpGX/yyQlv8skJb/KpGX/yeTmfgilZvbHZiesxiaoIMVnKJXE52jPQBBAL7/ABCepEISnaNfFpuhkRuZn8chlpz0JpOZ/yqRl/8skJb/LJCW/yqRl/8nk5n/IpWb4R2YnrUYmqCDFZyiVROdozsAQQC+/wAQnqQwEp2jTxaboYMbmZ+9IJac7iWUmv8pkpj/K5GX/yyQlv8qkZf/JpOZ/yKVnOAcmJ6zGJqgfxScolESnaM2AEEAvv8AD5+lJRGepEUVnKJ7Gpmfth+WneoklJr/KJKY/yuRl/8rkZf/KZKY/yWUmv8hlpzgG5mfsxeboYETnaNTEZ6kOQBBAL7/AA6fpSUQnqRFFJyiexmaoLYel53pI5Wb/yeTmf8pkpj/KZKY/yiSmf8klJr/H5ed4RqZn7cVnKKHEZ2kXA+epUIAQQC+/wANoKYpD5+lSBOdo3wYmqG1HZie5SKVm/8mk5n/KJKY/yiSmP8mk5n/IpWb9x2Xnt0YmqC3E5yjihCepGIOn6VKAEEAvv8AC6GnJA2gpkIRnqRzFpuhqRuZn9UglpzwJJSa+iaTmfkmk5n0JJSa7CCWnN4cmJ7IFpuhphKdo34On6VZDKCmQwBBAL7/AAqhpxAMoKYsD56lWhScoosamZ+yH5edyCKVm84klJrKJJSawyKVm7sfl52wGpmfnRWcooEQnqRdDKCmPAqhpygAQQC+/wAIoqgACqGnCA6fpTMTnaNgGJqggh2YnpIhlpyUI5WbjSOVm4Qhlpx9HZiedBiaoGQTnaNMDp+lLAuhpw4JoqgAAEEAvv8AB6OpAAmiqAANoKYKEp2jNBeboVIcmJ5eIJacXCKVm1MilZtJIJacQhyYnjoXm6EtEp2jFw2gpgAJoagAB6OpAAFBAL7/AAejqQAJoqgADaCmABGepBgXm6E0HJifPh+XnTohlpwvIZacJR+XnR4cmJ8XF5uhCxGepAANoKYACaKoAAejqQDkMctcun7cAwAAAABJRU5ErkJggg==',
+    },
+    {
+      title: 'iOS Developer',
+      imgUrl: '/images/ios-lp.jpg',
+      imgPlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAACfElEQVR4AQBBAL7/AAsCB/8TCg7/IBca/y4kJf86Ly3/QDUx/0E2Mf88My3/NS0o/y8pJf8qJiT/JSUl/x8hJP8VGR7/CA4V/wAGDv8AQQC+/wAZCxD/IRQX/y8hIv89Li7/SDk2/08/O/9RQjz/T0A6/0o8Nv9FOTT/QTg1/z03N/84NDb/Liwx/yIiKP8ZGyL/AEEAvv8ALRoe/zUjJf9DMDH/UT08/1xIRP9jTkn/ZlFL/2ZSS/9kUUr/YVBK/15QTP9cUE7/Vk1O/01GSf9DPUL/OzY8/wBBAL7/ADoqLv9DMzb/UD9B/11MS/9nVVL/bVpV/3BdV/9xX1j/cWBZ/3BgWv9uYFz/a19e/2ZcXf9dVln/VE5T/01ITv8AQQC+/wA4OD//QUBG/05MUf9ZV1n/YV1d/2RgXv9mYl7/aGNf/2hlYP9nZWL/ZWRj/2FjY/9bX2L/U1le/0tSWf9FTVX/AEEAvv8AJkNP/y9MVv88V2D/RmBn/0pjaP9LY2b/TGNk/0xkZP9NZWX/TGVm/0ljZv9EYGX/Plxj/zdXYP8wUV3/LE5a/wBBAL7/AAxNXv8VVWb/IWFv/ypodf8tanT/LGdw/ytlbP8rZmz/LWdt/yxnbv8pZm7/I2Jt/x5ea/8YWmn/E1do/xFVZ/8AQQC+/wAAVWz/AF10/whpff8RcIL/E3GB/xFte/8Pa3f/EGx3/xNuef8Tb3v/EG17/wxqev8HZ3r/A2V5/wBjev8AY3r/AUEAvv8AAFl0/wBifP8Abob/AnWL/wR2if8BcoP/AHB//wJxf/8FdIL/BnWF/wR1hv8Acob/AHCG/wBvh/8Ab4j/AG+J/yvmCgmmicVYAAAAAElFTkSuQmCC',
+      path: 'ios',
+      badge: '/images/badge-ios.png',
+      badgePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEZklEQVR4AQBBAL7/AA6VmgAUlpwAHZaeACWTngAqjJgLKoCPDyh1hgomboAEJ26AASt1hwIugZECL4ybACyToQAklqIAHJahABaVnwAAQQC+/wAPlJoAFZWcAB6VngEmkpweKomWMSl+jTcncoMzJWp8LSZqfSopcoQqLX2OKC6JmB4rkZ8HJJWhAByUnwAXk54AAEEAvv8AEpOaAhiUnBYfk5w3Jo+aVymFk24oeIh4JGx9diJkdnEiZHduJmt+bCt3iWcthJRZKo2bPiSRnhsdkp0AF5GcAABBAL7/ABaSmjEakptHIZCabCeKlpEof46uJXGCvCFjdr4dW266HltutiJjdrIncIKpK32OlimIl3YkjZpPHY6aKhmOmhMAQQC+/wAZkZlNHZCaZiONmI8nhpO6J3mI3CJqe/AdW272GVJm9BlRZu8eWm7pJGh73Ch3iMQogpKfJImXcx6LmEsai5cyAEEAvv8AHZCZUCCPmWwli5aZJ4KPyiV0hPIgY3X/GVNn/xVKXv8VSV7/GlJn/yFhdfgncYPbKH6OsyWGlIMgiZZXHImWPQBBAL7/ACCQmUIjjphfJomVkSh/jcclcID0Hl5x/xdOYv8SRFn/E0Ra/xhOY/8gXnL/J26B4Sl8jbUmhZSDIoiWVR+JljsAQQC+/wAikJowJY+ZTyiJlYMpf429JW+A7h5dcP8XTWH/EkNY/xNDWf8ZTWP/IV5y/yhvguAqfY6zKIaVfySKmFEhi5g2AEEAvv8AI5KcJSaRm0Upi5d7KoGPtidyguogYHL/GE9k/xRGW/8VR1z/G1Fm/yNhdf8qc4XgLYGSsyuKmYEmjptTI4+cOQBBAL7/ACOVniUmk55FKY+aeyuFk7YodobpImV3/xtWaf8XTWH/GU5j/x9Ybf8naHz/LXmL4S+Hl7csj52HJ5KfXCSToEIAQQC+/wAhmKApJJegSCmTnXwripe1KnyL5SVsff8fXnH/G1Zq/x1Xa/8jYXX/KnGD9y+Bkt0wjZ23LJSiiieXo2Iil6NKAEEAvv8AHZqhJCGZoUImlqBzKo+aqSqDkdUmdITwIWd4+h9fcvkgYXT0Jmp97Cx5i94wiJjIL5OhpiqZpX4jmqVZH5qkQwBBAL7/ABeaoRAcmqEsIpihWieSnYspiJWyJnqJyCNuf84haHnKIml7wydyhLstgJGwL46cnS2XpIEmm6ddHpumPBmbpCgAQQC+/wARmp8AFpqgCB2ZoTMklJ5gJ4uXgiZ/jZIjdISUIm5/jSNwgYQoeYl9LIWVdC2Rn2QpmaVMIZymLBibpA4SmqIAAEEAvv8ADJmeABGZnwAZmaAKIZWeNCSNmVIkgpBeIniHXCFyglMjdIRJJ3yMQiqIlzork6AtJpqlFxycpQASmqIADJigAAFBAL7/AAmYnAAOmZ4AF5mgAB+Wnhgjjpk0I4SRPiJ6iDohdIQvI3aGJSZ+jh4pipgXKZShCyOapQAZm6UAD5mhAAiXngCLv6bmmsDyvAAAAABJRU5ErkJggg==',
+    },
+    {
+      title: 'Machine Learning Engineer',
+      imgUrl: '/images/ml-lp.jpg',
+      imgPlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAACfElEQVR4AQBBAL7/AIp6if+Wh5b/o5Wk/6WZqP+ek6L/l46d/5mQoP+gmKj/pJys/5+Wpv+Tipn/hXqJ/3ZpeP9jVWP/Tj9O/0AwP/8AQQC+/wB9bnv/iHqH/5SHlP+Wipf/joSS/4iAjf+KhJH/k42b/5qUof+XkZ7/joaU/4J5h/91a3j/ZFhl/1FEUf9EN0P/AEEAvv8Aa2Fq/3Zsdv+AeIH/gHmD/3dyff9xbnj/dXN+/4CAi/+KiZT/i4qV/4WDjv98eYT/cm54/2Rfaf9UTVf/SEFL/wBBAL7/AF1dZf9naHD/cHJ6/25xev9kaXL/XWRt/2Fqc/9ueIL/eYSN/3yGkP94gov/cXqE/2pye/9fZm//Ulhh/0hNVv8AQQC+/wBVZW//Xm95/2Z4gv9id4H/Vm13/05ncv9SbHf/XnqF/2iFkf9rh5P/ZoOO/2B8h/9adYD/Umx3/0hga/9AWGP/AEEAvv8ASnB//1N6if9bhJL/V4KR/0t4iP9BcYH/RHWG/06Bkv9Wi5v/Voqb/0+DlP9IfIz/QnaG/zxvf/80Znb/Ll9v/wBBAL7/ADV0iv8/f5X/SIqg/0aKoP87gZf/MnqR/zN+lf87iKD/QY+n/z2MpP8zgpr/K3mR/yVzi/8hbob/G2iA/xdje/8AQQC+/wAbb4z/J3uY/zGIpf8xiqf/KIOh/yB9nP8hgaD/KIuq/yyQr/8miqr/Gn+e/xB0lP8Lb4//CGuL/wRnh/8BZIP/AUEAvv8ACGiJ/xV1lv8hg6X/Ioep/xqCpP8TfaD/FYKl/xyLrv8ej7P/F4is/wp7oP8AcZX/AGyQ/wBpjf8AZor/AGOH/49bTgrG7Cb6AAAAAElFTkSuQmCC',
+      path: 'ml',
+      badge: '/images/badge-ml.png',
+      badgePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEZklEQVR4AQBBAL7/AAmcngAOnJ8AFZufAByXnQAgj5cLIYWPDx97hwoedYIEHnWCAR97hwIhhY8CII+XAByWnQAVm58ADpyfAAmcngAAQQC+/wAMnJ8AEJygABeanwEdlp0eIY2WMSGDjjcgeYUzHnOALR5zgCogeYUqIYONKCGNlh4dlpwHF5qfABCcnwAMnJ8AAEEAvv8AEZ2gAhWcoBYbmZ83IJScVyOKlG4if4p4IHSBdh5ue3EebntuIHSBbCJ/imcjipRZIJObPhqZnxsUm6AAEJyfAABBAL7/ABicoTEbm6FHIJefbCSQmZElhpGuI3mGvB9te74dZnW6HWZ1th9te7IjeYapJIaRliOQmXYel55PGZqgKhaboBMAQQC+/wAdm6FNIJmgZiSUnY8mjJa6JoCM3CJyf/AeZXT2G11t9Btebu8eZXXpInKA3CWAjMQljJafIpSccx6Yn0sbmqAyAEEAvv8AIZifUCOWnmwmkJqZJ4eSyiV5hvIhann/HFxt/xhVZv8ZVWb/HF1u/yJrevgme4jbJ4iTsyWRmoMilp5XH5ifPQBBAL7/ACOVnUIlkptfJ4yWkSeBjcckc4H0H2Nz/xlVZv8WTV//Fk5g/xpXaP8gZnX/JnaE4SiEkLUnjpiDJJScVSKWnjsAQQC+/wAjkpswJZCZTyaJk4Mmfoq9I2997h1fb/8XUGL/FElb/xRKXP8ZU2X/IGNz/yV0guAog46zJ42XfyWTnFEjlZ02AEEAvv8AIpGaJSSOl0UliJJ7JX2JtiJufOocXm7/FlBh/xNJW/8USlz/GVRl/yBjc/8ldILgKIOPsyeNl4Ekk5xTIpadOQBBAL7/ACCSmiUij5hFI4mTeyR+irYhcH7pHGFw/xdUZP8UTV7/FU5g/xpYaf8gZ3f/JniF4SiGkbcmkJmHI5WdXCCXnkIAQQC+/wAdlJspH5GZSCKMlXwjgo21IXWC5R1ndv8ZW2v/F1Vl/xhWZ/8cYHD/Im599yZ+it0ni5W3JJOciiCYn2IdmaBKAEEAvv8AGZedJByVnEIfkJhzIoiSqSJ8iNUfb33wG2Rz+hpebvkbYHD0H2l47CN3hN4mhZDIJZCZpiGXn34bm6FZGJyhQwBBAL7/ABaanxAZmZ4sHZWcWiGOl4sihI+yIHiFyB5ufM4daXfKHmt5wyFzgLskf4uwJYyWnSOWnYEdm6FdFp2iPBKeoSgAQQC+/wASnaEAFZyhCBuZnzMglJtgIouUgiKAi5Igd4OUH3J/jSB0gYQjfIh9JYeRdCSSm2QgmqFMGZ6jLBGfog4Mn6EAAEEAvv8AD5+iABOeogAZnKEKHpieNCKQmFIihpBeIX2JXCF5hVMie4dJJIKNQiWMljojlp4tHp2jFxWgpAAMoKIAB5+hAAFBAL7/AA2gogARoKMAGJ6jAB6aoBgikpo0I4mTPiKBjDoifIgvIn6KJSSFkB4lj5gXIpifCxyepAAToKQACqCiAASfoAD+U6cIsdZo/wAAAABJRU5ErkJggg==',
+    },
+  ]

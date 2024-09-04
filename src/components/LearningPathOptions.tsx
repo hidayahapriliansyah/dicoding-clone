@@ -9,6 +9,7 @@ import LearningPathOptionCard from './LearningPathOptionCard';
 import { Swiper as SwiperType } from 'swiper/types';
 import { learningPaths, LearningPaths } from '../data/learning-paths';
 import LearningPathCourses from './LearningPathCourses';
+import { LoadingImage } from './LoadingImage';
 
 const LearningPathOptions = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -99,7 +100,7 @@ const LearningPathOptions = () => {
         </div>
 
         <Swiper
-          spaceBetween={16}
+          // spaceBetween={16}
           slidesPerView={'auto'}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
@@ -124,7 +125,8 @@ const LearningPathOptions = () => {
                 maxWidth: 'fit-content',
                 overflow: 'hidden',
                 transition: 'all',
-                transitionDuration: '0.3s'
+                transitionDuration: '0.3s',
+                marginLeft: i === 0 ? '' : '16px',
               }}
               onClick={() => {
                 if (path !== lpath.path) setPath(lpath.path);
@@ -134,8 +136,10 @@ const LearningPathOptions = () => {
                 imgUrl={lpath.imgUrl}
                 title={lpath.title}
                 badge={lpath.badge}
+                badgePlaceholder={lpath.badgePlaceholder}
                 path={lpath.path}
                 selectedPath={path}
+                imgPlaceholder={lpath.imgPlaceholder}
               />
             </SwiperSlide>
           ))}
@@ -146,15 +150,17 @@ const LearningPathOptions = () => {
               maxWidth: 'fit-content',
               overflow: 'hidden',
               transition: 'all',
-              transitionDuration: '0.3s'
+              transitionDuration: '0.3s',
+              marginLeft: '16px',
             }}
           >
             <div
               className='relative flex justify-center items-start w-full max-w-[220.5px] xl:max-w-[265.5px] h-full bg-blue-400 transition-all duration-150 rounded-[5px] overflow-hidden hover:cursor-pointer'
             >
-              <Image
+              <LoadingImage
                 alt='Lihat lebih banyak learning path'
                 src={'/images/badge-more.png'}
+                placeholder='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAADCElEQVR4AQBBAL7/ADJndv8tYnH/JFln/xlMW/8SQ1H/EEBO/xRCUP8YRFL/GEJQ/xY/Tf8YQE7/HkZU/yVMWv8lS1r/HkRS/xc9S/8AQQC+/wAqX23/J1tp/yBTYv8YSlj/EkNR/xNCUP8ZRlT/HUlX/x1HVf8ZQlD/GEBO/xxDUf8hR1b/IEZU/xk/Tf8SOEb/AEEAvv8AH1Jg/x1QXv8aS1n/FUVT/xNCUP8XRVP/IExa/yZQXv8lTlz/H0dV/xpBT/8ZQE7/G0FQ/xpATv8TOUj/DjRC/wBBAL7/ABVEUv8VRFL/FEJQ/xI/Tv8TP03/GkVT/yROXP8sVGL/K1Jg/yNJWP8bQE//FzxL/xc9S/8WPEr/EzhG/w80Qv8AQQC+/wAPOUf/ETpJ/xE6Sf8ROUf/EjpI/xk/Tf8kSVf/LFBf/yxQXv8jR1X/Gj1L/xU4Rv8VOUf/FztJ/xc6Sf8VOUf/AEEAvv8ADzJA/xE0Qv8TNUP/EjNB/xEyQP8VNUP/Hj1L/yZFU/8mRVP/Hz5M/xY1Q/8RMT//FDNC/xk5R/8cPEv/HT5M/wBBAL7/ABItO/8VMD7/FzE//xQuPP8QKTj/ECk3/xUuPP8cNUP/HjdF/xgxP/8QKjj/DSc1/xEsOv8YM0H/HjlI/yE8S/8AQQC+/wAVJzX/GSs6/xwuPP8ZKzn/EiMy/w4fLf8QIjD/Fig2/xgqOf8UJzX/DSEv/woeLf8NIjD/FCo4/xowPv8dNEL/AEEAvv8AFiAv/x0nNf8iLDr/Hyk3/xchL/8QGij/ERsp/xYhL/8ZJTP/FiMx/w8dK/8LGSf/Cxsp/w8fLv8TJDL/FSc1/wBBAL7/ABYaKP8eIjD/Jik4/yUpN/8dIS//Fhoo/xUaKP8bIC7/HyUz/xwkMv8VHiz/Dhgm/wsWJP8LGCb/DBko/w0aKf8BQQC+/wAVFSP/Hh8t/ygoNv8pKTf/ISIw/xobKf8aGyr/HyIw/yQoNv8iJzX/GiAu/xEZJ/8MFSP/ChQi/wkUIv8IEyL/wbQSgyvswL4AAAAASUVORK5CYII='
                 width={510}
                 height={384}
                 quality={50}

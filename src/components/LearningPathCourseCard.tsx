@@ -1,9 +1,22 @@
 import { Award, Clock4, Star, TrendingUp, Users } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
+import { LoadingImage } from './LoadingImage';
+import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props';
 
-const LearningPathCourseCard = ({ hours, imgUrl, level, step, summary, title, totalStudents, rating }: {
+const LearningPathCourseCard = ({
+  hours,
+  imgUrl,
+  imgPlaceholder,
+  level,
+  step,
+  summary,
+  title,
+  totalStudents,
+  rating
+}: {
   imgUrl: string;
+  imgPlaceholder: string;
   step: number;
   title: string;
   level: string;
@@ -15,12 +28,13 @@ const LearningPathCourseCard = ({ hours, imgUrl, level, step, summary, title, to
   return (
     <div className='relative w-full h-full bg-white overflow-hidden text-primary-text  hover:shadow-lg group'>
       <div className='relative w-full aspect-square group-hover:-mt-[75%] md:group-hover:-mt-[50%] transition-all duration-500 ease-in-out'>
-        <Image
+        <LoadingImage
           src={`/images/courses/${imgUrl}`}
           alt={title}
           fill
           quality={80}
           className='absolute object-contain'
+          placeholder={imgPlaceholder as PlaceholderValue}
         />
       </div>
       <div className='absolute object-top flex flex-col justify-between items-baseline md:group-hover:-mt-[25%] lg:group-hover:-mt-[45%] xl:group-hover:-mt-[25%] min-h-[326px] bg-white p-4 transition-all duration-300 ease-in-out'>

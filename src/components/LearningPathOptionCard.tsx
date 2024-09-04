@@ -2,13 +2,17 @@ import React from 'react'
 import Image from 'next/image'
 import clsx from 'clsx';
 import { LearningPaths } from '../data/learning-paths';
+import { LoadingImage } from './LoadingImage';
+import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props';
 
-const LearningPathOptionCard = ({ title, imgUrl, badge, path, selectedPath }: {
+const LearningPathOptionCard = ({ title, imgUrl, badge, path, selectedPath, imgPlaceholder, badgePlaceholder }: {
   imgUrl: string,
   title: string,
   badge: string,
+  badgePlaceholder: string,
   path: LearningPaths,
   selectedPath: LearningPaths,
+  imgPlaceholder: string;
 }) => {
   return (
     <div
@@ -19,15 +23,17 @@ const LearningPathOptionCard = ({ title, imgUrl, badge, path, selectedPath }: {
         'w-[160.5px] lg:w-[220.5px] xl:w-[265.5px]': path !== selectedPath,
       })}
     >
-      <Image
+      <LoadingImage
         alt={title}
         src={imgUrl}
         width={350}
         height={190}
-        className='absolute h-full object-none object-bottom'
+        className='absolute h-full object-cover object-bottom'
+        placeholder={imgPlaceholder as PlaceholderValue}
       />
-      <Image
+      <LoadingImage
         src={badge}
+        placeholder={badgePlaceholder as PlaceholderValue}
         alt={`Badge ${title}`}
         width={48}
         height={48}

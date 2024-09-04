@@ -60,8 +60,8 @@ const CustomSlider: FC = () => {
           setIsBeginning(false);
           setIsEnd(false);
         }}
-        spaceBetween={24}
-        slidesPerView={1.2}
+        slidesPerView={1}
+        centeredSlides
         breakpoints={{
           768: {
             slidesPerView: 2
@@ -70,17 +70,19 @@ const CustomSlider: FC = () => {
             slidesPerView: 1.2
           }
         }}
-        centeredSlides
-        className="swiper-container mx-auto"
       >
         {newPrograms.map((program, i) => (
           <SwiperSlide
             key={i}
-            className='w-full'
+            style={{
+              width: '85%',
+              marginLeft: i === 0 ? '' : '24px',
+            }}
           >
             <NewProgramCard
               description={program.description}
-              imageLink={program.imageLink}
+              image={program.image}
+              imgPlaceholder={program.imgPlaceholder}
               organizer={program.organizer}
               title={program.title}
             />

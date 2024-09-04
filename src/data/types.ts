@@ -9,6 +9,7 @@ export type CourseLearningPath = {
 export type Course = {
   link: string;
   image: string;
+  imgPlaceholder: string;
   step: number;
   title: string;
   rating: number;

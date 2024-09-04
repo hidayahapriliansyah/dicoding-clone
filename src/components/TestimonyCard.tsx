@@ -2,17 +2,19 @@ import Image from 'next/image'
 import React from 'react'
 import { Testimony } from '../data/testimonies'
 import { MoveRight } from 'lucide-react'
+import { LoadingImage } from './LoadingImage'
+import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
 
-const TestimonyCard = ({ image, company, completedClass, description, name, profession }: Testimony) => {
+const TestimonyCard = ({ image, imgPlaceholder, company, completedClass, description, name, profession }: Testimony) => {
   return (
     <div className='flex flex-col md:flex-row-reverse w-full'>
       <div className='relative w-full md:max-w-[300px] lg:max-w-[400px] xl:max-w-[475px] h-[250px] md:h-[390px] overflow-hidden'>
-        <Image
+        <LoadingImage
           alt={name}
-          src={image}
-          layout='fill'
-          objectFit='cover'
-          objectPosition='top'
+          src={`/images/${image}`}
+          fill
+          placeholder={imgPlaceholder as PlaceholderValue}
+          className='object-cover object-top'
         />
       </div>
       <div className='p-6 lg:p-12 w-full'>

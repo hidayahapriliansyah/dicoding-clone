@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import { clients } from '../data/clients'
 import ClientMarquee from './ClientMarquee'
+import { LoadingImage } from './LoadingImage'
+import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
 
 const Clients = () => {
   return (
@@ -15,9 +17,10 @@ const Clients = () => {
               key={i}
               className='flex items-center h-[64px] py-2 border border-gray-300 rounded-sm'
             >
-              <Image
+              <LoadingImage
                 alt={client.title}
-                src={client.imageLink}
+                src={`/images/clients/${client.image}`}
+                placeholder={client.imgPlaceholder as PlaceholderValue}
                 width={180}
                 height={50}
                 className='p-8'
