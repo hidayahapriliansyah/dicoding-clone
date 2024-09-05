@@ -1,7 +1,5 @@
 import { CircleChevronRight } from 'lucide-react'
 import React from 'react'
-import courses from '../data/courses';
-import Image from 'next/image';
 import SwiperCourseMobile from './SwiperCourseMobile';
 import SwiperCourseDesktop from './SwiperCourseDesktop';
 

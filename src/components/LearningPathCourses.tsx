@@ -107,6 +107,7 @@ const LearningPathCourses = ({ selectedPath }: { selectedPath: LearningPaths }) 
                 }}
               >
                 <LearningPathCourseCard
+                  link={course.link}
                   hours={course.hours}
                   imgUrl={course.image}
                   imgPlaceholder={course.imgPlaceholder}

@@ -1,4 +1,4 @@
-import { Award, Clock4, Star, TrendingUp, Users } from 'lucide-react'
+import { Clock4, TrendingUp, Users } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import { LoadingImage } from './LoadingImage';
@@ -13,7 +13,8 @@ const LearningPathCourseCard = ({
   summary,
   title,
   totalStudents,
-  rating
+  rating,
+  link,
 }: {
   imgUrl: string;
   imgPlaceholder: string;
@@ -24,9 +25,14 @@ const LearningPathCourseCard = ({
   hours: number;
   totalStudents: string;
   rating: number;
+  link: string;
 }) => {
   return (
-    <div className='relative w-full h-full bg-white overflow-hidden text-primary-text  hover:shadow-lg group'>
+    <a
+      href={link}
+      target='_blank'
+      className='relative w-full h-full bg-white overflow-hidden text-primary-text  hover:shadow-lg group'
+    >
       <div className='relative w-full aspect-square group-hover:-mt-[75%] md:group-hover:-mt-[50%] transition-all duration-500 ease-in-out'>
         <LoadingImage
           src={`/images/courses/${imgUrl}`}
@@ -79,7 +85,7 @@ const LearningPathCourseCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 

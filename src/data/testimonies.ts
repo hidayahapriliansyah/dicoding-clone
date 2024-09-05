@@ -6,6 +6,7 @@ export type Testimony = {
   profession: string;
   company: string;
   completedClass: string;
+  link: string;
 };
 
 const testimonies: Testimony[] = [
@@ -16,7 +17,8 @@ const testimonies: Testimony[] = [
     name: 'Brian Mohammed Catraguna',
     profession: 'Software Engineer',
     company: 'Meta',
-    completedClass: 'Android Path'
+    completedClass: 'Android Path',
+    link: 'https://www.dicoding.com/blog/lulusan-teknik-dirgantara-yang-kini-berkarier-di-meta/',
   },
   {
     image: 'homepage-testimony-archie.jpg',
@@ -25,7 +27,8 @@ const testimonies: Testimony[] = [
     name: 'Made Acarya Mordekhai Karang',
     profession: 'Engineer On Site',
     company: 'PT Integrasi Data Nusantara',
-    completedClass: 'Front-End Web & Back-End Path'
+    completedClass: 'Front-End Web & Back-End Path',
+    link: 'https://www.dicoding.com/blog/merajut-asa-untuk-menjadi-developer-andal-lewat-dicoding-bootcamp/',
   },
   {
     image: 'homepage-testimony-karlina.jpg',
@@ -34,7 +37,8 @@ const testimonies: Testimony[] = [
     name: 'Karlina Surya Witanto',
     profession: 'IT Security Specialist',
     company: 'Bank BCA',
-    completedClass: 'Machine Learning & Front-End Web Path'
+    completedClass: 'Machine Learning & Front-End Web Path',
+    link: 'https://www.dicoding.com/blog/belajar-membangun-integritas-di-sib-dicoding-cycle-1/',
   },
   {
     image: 'homepage-testimony-steven.jpg',
@@ -43,7 +47,8 @@ const testimonies: Testimony[] = [
     name: 'Steven Setiawan',
     profession: 'Full-Stack Engineer',
     company: 'PT Innovine Studio Indonesia',
-    completedClass: 'Machine Learning Path'
+    completedClass: 'Machine Learning Path',
+    link: 'https://www.dicoding.com/blog/karier-berkembang-pasca-belajar-di-dicoding/',
   },
   {
     image: 'homepage-testimony-ricky.jpg',
@@ -52,7 +57,8 @@ const testimonies: Testimony[] = [
     name: 'Ricky Tanudjaja',
     profession: 'Software Developer',
     company: 'Samsung Research Indonesia',
-    completedClass: 'Back-End & DevOps Engineer Path'
+    completedClass: 'Back-End & DevOps Engineer Path',
+    link: 'https://www.dicoding.com/blog/berusaha-jadi-talenta-digital-yang-terus-belajar/',
   }
 ];
 

@@ -54,12 +54,17 @@ const TestimoniSiswa = () => {
                   imgPlaceholder={testi.imgPlaceholder}
                   name={testi.name}
                   profession={testi.profession}
+                  link={testi.link}
                 />
               </SwiperSlide>
             ))
           }
         </Swiper>
-        <a href="#" className='flex items-center gap-3 ml-auto my-6 w-fit font-bold'>
+        <a
+          href="https://www.dicoding.com/testimonies"
+          target='_blank'
+          className='flex items-center gap-3 ml-auto my-6 w-fit font-bold'
+        >
           Lihat semua <SquareArrowOutUpRight />
         </a>
       </div>

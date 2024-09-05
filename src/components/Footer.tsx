@@ -27,16 +27,28 @@ const Footer = () => {
             </p>
             <dl className='text-primary-text text-xl'>
               <dd className='flex items-center gap-8'>
-                <a href="#">
+                <a
+                  href="https://www.instagram.com/dicoding/"
+                  target='_blank'
+                >
                   <AiFillInstagram />
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.youtube.com/channel/UCM6BWkgiGrCHG967i_PyMiw"
+                  target='_blank'
+                >
                   <FaYoutube />
                 </a>
-                <a href="#">
+                <a
+                  href="https://twitter.com/dicoding"
+                  target='_blank'
+                >
                   <FaTwitter />
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/dicoding"
+                  target='_blank'
+                >
                   <FaFacebookF />
                 </a>
               </dd>
@@ -63,7 +75,11 @@ const Footer = () => {
                 Discover Potential
               </p>
               <dd className='mb-2'>
-                <a href="#" className='text-[.9rem] md:text-base hover:underline'>
+                <a
+                  href="https://www.dicoding.com/about"
+                  target='_blank'
+                  className='text-[.9rem] md:text-base hover:underline'
+                >
                   <h6>Tentang Kami</h6>
                 </a>
               </dd>
@@ -72,26 +88,50 @@ const Footer = () => {
           <div className='text-sm md:text-[.9rem] w-[50%] md:max-w-full text-primary-text'>
             <dl className='flex flex-col gap-3 my-4'>
               <dd>
-                <a href="#">Blog</a>
+                <a
+                  href="https://www.dicoding.com/blog/"
+                  target='_blank'
+                  className='hover:underline'
+                >Blog</a>
               </dd>
               <dd>
-                <a href="#">Reward</a>
+                <a
+                  href="https://www.dicoding.com/rewards"
+                  target='_blank'
+                  className='hover:underline'
+                >Reward</a>
               </dd>
               <dd>
-                <a href="#">Showcase</a>
+                <a
+                  href="https://www.dicoding.com/showcases"
+                  target='_blank'
+                  className='hover:underline'
+                >Showcase</a>
               </dd>
               <dd>
-                <a href="#">Dicoding Elite</a>
+                <a
+                  href="https://www.dicoding.com/elite"
+                  target='_blank'
+                  className='hover:underline'
+                >Dicoding Elite</a>
               </dd>
             </dl>
           </div>
           <div className='text-sm md:text-[.9rem] w-[50%]  md:max-w-full'>
             <dl className='flex flex-col gap-3 my-4 text-primary-text'>
               <dd>
-                <a href="#">Hubungi Kami</a>
+                <a
+                  href="https://www.dicoding.com/contact-us"
+                  target='_blank'
+                  className='hover:underline'
+                >Hubungi Kami</a>
               </dd>
               <dd>
-                <a href="#">FAQ</a>
+                <a
+                  href="https://help.dicoding.com/"
+                  target='_blank'
+                  className='hover:underline'
+                >FAQ</a>
               </dd>
             </dl>
           </div>

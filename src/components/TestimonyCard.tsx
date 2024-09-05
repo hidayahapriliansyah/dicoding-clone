@@ -5,7 +5,16 @@ import { MoveRight } from 'lucide-react'
 import { LoadingImage } from './LoadingImage'
 import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props'
 
-const TestimonyCard = ({ image, imgPlaceholder, company, completedClass, description, name, profession }: Testimony) => {
+const TestimonyCard = ({
+  image,
+  imgPlaceholder,
+  company,
+  completedClass,
+  description,
+  name,
+  profession,
+  link,
+}: Testimony) => {
   return (
     <div className='flex flex-col md:flex-row-reverse w-full'>
       <div className='relative w-full md:max-w-[300px] lg:max-w-[400px] xl:max-w-[475px] h-[250px] md:h-[390px] overflow-hidden'>
@@ -27,7 +36,11 @@ const TestimonyCard = ({ image, imgPlaceholder, company, completedClass, descrip
           Lulusan{' '}{completedClass}
         </small>
         <hr className='my-4' />
-        <a href="#" className='flex items-center gap-2 ml-auto mb-4 w-fit font-bold text-sm lg:text-base group'>
+        <a
+          href={link}
+          target='_blank'
+          className='flex items-center gap-2 ml-auto mb-4 w-fit font-bold text-sm lg:text-base group'
+        >
           Baca kisahnya
           <MoveRight className='group-hover:translate-x-1 transition-all duration-200' />
         </a>

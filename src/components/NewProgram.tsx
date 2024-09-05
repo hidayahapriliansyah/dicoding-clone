@@ -2,7 +2,6 @@
 
 import React from 'react'
 import NewProgramSlider from './NewProgramSlider'
-import NewProgramCard from './NewProgramCard'
 
 const NewProgram = () => {
   return (

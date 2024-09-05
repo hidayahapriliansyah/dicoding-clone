@@ -139,7 +139,7 @@ const DicodingNetwork = () => {
               >
                 <h3 className='mt-6 mb-4 font-semibold text-xl'>Dicoding Challenge</h3>
                 <p className='mb-4 text-[.9rem]'>Kami telah menyelenggarakan berbagai macam challenge dengan jutaan hadiah. Dengan platform Challenge, developer bisa mengasah skill yang dipelajari dari Academy.</p>
-                <a href="#" className='flex items-center gap-3 font-bold'>
+                <a href="https://www.dicoding.com/challenges" target='_blank' className='flex items-center gap-3 font-bold'>
                   Lihat Challenge
                   <MoveRight />
                 </a>
@@ -155,7 +155,11 @@ const DicodingNetwork = () => {
               >
                 <h3 className='mt-6 mb-4 font-semibold text-xl'>Dicoding Event</h3>
                 <p className='mb-4 text-[.9rem]'>Berkolaborasi dengan komunitas developer, kami telah menyelenggarakan event di berbagai kota yang dihadiri puluhan ribu developer dan praktisi teknologi Indonesia.</p>
-                <a href="#" className='flex items-center gap-3 font-bold'>
+                <a
+                  href="https://www.dicoding.com/events"
+                  target='_blank'
+                  className='flex items-center gap-3 font-bold'
+                >
                   Lihat Event
                   <MoveRight />
                 </a>
@@ -171,7 +175,11 @@ const DicodingNetwork = () => {
               >
                 <h3 className='mt-6 mb-4 font-semibold text-xl'>Dicoding Job</h3>
                 <p className='mb-4 text-[.9rem]'>Bekerjasama dengan beberapa industri, kami telah membantu developer Indonesia dalam mencari lapangan pekerjaan yang sesuai dengan skillnya.</p>
-                <a href="#" className='flex items-center gap-3 font-bold'>
+                <a
+                  href="https://www.dicoding.com/jobs/old"
+                  target='_blank'
+                  className='flex items-center gap-3 font-bold'
+                >
                   Lihat Job
                   <MoveRight />
                 </a>

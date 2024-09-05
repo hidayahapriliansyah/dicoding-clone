@@ -13,9 +13,12 @@ const CourseCard = ({
   shiftRight = false
 }: Course & { shiftRight?: boolean }) => {
   return (
-    <a href='#' className={clsx('relative block w-[300px] lg:w-[257px] xl:w-[310px] h-[124px] bg-white  rounded-[10px] overflow-hidden lg:hover:-translate-y-1 lg:transition-all lg:duration-300', {
-      'translate-x-16': shiftRight
-    })}>
+    <a
+      href={link}
+      className={clsx('relative block w-[300px] lg:w-[257px] xl:w-[310px] h-[124px] bg-white  rounded-[10px] overflow-hidden lg:hover:-translate-y-1 lg:transition-all lg:duration-300', {
+        'translate-x-16': shiftRight
+      })}
+    >
       <LoadingImage
         src={`/images/${image}`}
         placeholder={imgPlaceholder as PlaceholderValue}

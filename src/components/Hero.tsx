@@ -11,9 +11,11 @@ const Hero = () => {
       <div className='w-full md:w-[40%] h-full md:pt-[100px] px-[15px]'>
         <h2 className='text-[1.5rem] md:text-[2rem] text-primary-text font-medium mb-4'>Bangun Karirmu Sebagai Developer Profesional</h2>
         <p className='mb-5 md:mb-10'>Mulai belajar terarah dengan learning path</p>
-        <Button
-          className='font-bold text-[1rem] px-6'
-        >Belajar Sekarang</Button>
+        <a href="#learning-path" className='block w-fit h-fit'>
+          <Button
+            className='font-bold text-[1rem] px-6'
+          >Belajar Sekarang</Button>
+        </a>
       </div>
 
       <div className='relative flex items-center w-full h-full max-h-[216px] md:max-h-full md:w-[60%]'>

@@ -85,6 +85,7 @@ const CustomSlider: FC = () => {
               imgPlaceholder={program.imgPlaceholder}
               organizer={program.organizer}
               title={program.title}
+              link={program.link}
             />
           </SwiperSlide>
         ))}
