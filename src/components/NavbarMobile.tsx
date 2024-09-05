@@ -59,9 +59,9 @@ const NavbarMobile = () => {
         </div>
 
         <div className='flex justify-center w-full bg-gray-50 gap-4 p-6'>
-          <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold'>Masuk</Button>
+          <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold rounded-[2px]'>Masuk</Button>
           <a href="https://www.dicoding.com/registration" target='_blank' className='block w-fit h-fit'>
-            <Button size={'lg'} className='text-[1rem] font-bold'>Daftar</Button>
+            <Button size={'lg'} className='text-[1rem] font-bold rounded-[2px]'>Daftar</Button>
           </a>
         </div>
 

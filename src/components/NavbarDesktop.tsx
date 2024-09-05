@@ -176,13 +176,13 @@ const NavbarDesktop = () => {
         </div>
 
         <div className='flex items-center gap-2'>
-          <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold'>Masuk</Button>
+          <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold rounded-[2px]'>Masuk</Button>
           <a
             href="https://www.dicoding.com/registration"
             target='_blank'
             className='block w-fit h-fit'
           >
-            <Button size={'lg'} className='text-[1rem] font-bold'>Daftar</Button>
+            <Button size={'lg'} className='text-[1rem] font-bold rounded-[2px]'>Daftar</Button>
           </a>
         </div>
       </div>
