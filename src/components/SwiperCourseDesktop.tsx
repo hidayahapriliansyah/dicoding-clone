@@ -20,7 +20,11 @@ const SwiperCourseDesktop = () => {
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
       }}
-      freeMode={true}
+      freeMode={{
+        momentumRatio: 0.1,
+        momentumBounceRatio: 0.5,
+        momentumVelocityRatio: 0.5
+      }}
       loop={true}
       centeredSlides={true}
       modules={[Autoplay, FreeMode]}

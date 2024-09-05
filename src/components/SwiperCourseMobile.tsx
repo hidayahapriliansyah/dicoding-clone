@@ -17,10 +17,16 @@ const SwiperCourseMobile = () => {
       autoplay={{
         delay: 0,
         disableOnInteraction: false,
-        pauseOnMouseEnter: false,
+        stopOnLastSlide: false, // Pastikan autoplay tidak berhenti di slide terakhir
+        reverseDirection: false, // Memastikan arah autoplay tetap
+        pauseOnMouseEnter: false, // M
       }}
       centeredSlides
-      freeMode={true}
+      freeMode={{
+        momentumRatio: 0.1,
+        momentumBounceRatio: 0.5,
+        momentumVelocityRatio: 0.5
+      }}
       loop={true}
       modules={[Autoplay, FreeMode]}
       className='w-full'
