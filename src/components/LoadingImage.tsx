@@ -25,6 +25,7 @@ export const LoadingImage: React.FC<LoadingImageProps> = ({ placeholder, ...prop
           {...props}
           placeholder={undefined}
           src={placeholder}
+          className={`${props.className} blur-lg`}
         />
       }
       <Image
