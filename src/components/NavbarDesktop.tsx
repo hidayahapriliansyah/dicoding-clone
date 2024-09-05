@@ -16,20 +16,23 @@ const NavbarDesktop = () => {
     <nav className='hidden fixed z-50 lg:block p-4 w-full shadow-sm bg-white'>
       <div className='max-w-[1140px] 2xl:max-w-[1536px] mx-auto lg:flex lg:justify-between w-full gap-2'>
         <div className='flex gap-2 items-center'>
-          <Image
-            alt='Dicoding Indonesia'
-            src={'/new-ui-logo.png'}
-            width={32}
-            height={32}
-            className='object-contain mr-6'
-          />
+          <a href="/" className='block w-fit h-fit'>
+            <Image
+              alt='Dicoding Indonesia'
+              src={'/new-ui-logo.png'}
+              width={32}
+              height={32}
+              className='object-contain mr-6'
+            />
+          </a>
           <div className='w-[300px]'>
             <InputNav />
           </div>
           <ul className='flex text-[.875rem]'>
             <li>
               <Link
-                href='#'
+                href='https://www.dicoding.com/learningpaths/7'
+                target='_blank'
                 className='flex justify-center items-center py-2 px-4 w-full h-[50px] text-primary-text font-bold hover:bg-gray-100'
               >
                 Learning Path
@@ -48,7 +51,8 @@ const NavbarDesktop = () => {
                   className='p-0 rounded-[7px] shadow-md w-fit text-primary-text -mt-1 overflow-hidden'
                 >
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/subscriptions/purchases"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200'
                   >
                     <CreditCard className='w-4 h-4' />
@@ -58,7 +62,8 @@ const NavbarDesktop = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/login"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200'
                   >
                     <CreditCard className='w-4 h-4' />
@@ -82,13 +87,15 @@ const NavbarDesktop = () => {
                   className='p-0 rounded-[7px] shadow-md w-fit text-primary-text -mt-1 overflow-hidden'
                 >
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/bangun-negeri/university"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200 text-[.9rem]'
                   >
                     Dicoding Bangung Negeri Batch 7
                   </Link>
                   <Link
-                    href="#"
+                    href="https://aws.dicoding.com/"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200 text-[.9rem]'
                   >
                     AWS Back-End Academy 2024
@@ -108,7 +115,8 @@ const NavbarDesktop = () => {
                   className='p-0 rounded-[7px] shadow-md w-fit text-primary-text -mt-1 overflow-hidden'
                 >
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/challenges"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200'
                   >
                     <Rocket className='w-4 h-4' />
@@ -118,7 +126,8 @@ const NavbarDesktop = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://jobs.dicoding.com/"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200'
                   >
                     <Briefcase className='w-4 h-4' />
@@ -128,7 +137,8 @@ const NavbarDesktop = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/events"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200'
                   >
                     <Calendar className='w-4 h-4' />
@@ -138,7 +148,8 @@ const NavbarDesktop = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/mentoring"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200'
                   >
                     <MessageCircleCode className='w-4 h-4' />
@@ -148,7 +159,8 @@ const NavbarDesktop = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/rewards"
+                    target='_blank'
                     className='flex items-center p-4 hover:bg-gray-200'
                   >
                     <Gift className='w-4 h-4' />
@@ -165,7 +177,13 @@ const NavbarDesktop = () => {
 
         <div className='flex items-center gap-2'>
           <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold'>Masuk</Button>
-          <Button size={'lg'} className='text-[1rem] font-bold'>Daftar</Button>
+          <a
+            href="https://www.dicoding.com/registration"
+            target='_blank'
+            className='block w-fit h-fit'
+          >
+            <Button size={'lg'} className='text-[1rem] font-bold'>Daftar</Button>
+          </a>
         </div>
       </div>
     </nav>
