@@ -22,13 +22,15 @@ const NavbarMobile = () => {
 
   return (
     <nav className='lg:hidden fixed z-40 py-4 px-8 flex justify-between items-center h-[66px] w-full bg-white shadow-md'>
-      <Image
-        alt='Dicoding Indonesia'
-        src={'/new-ui-logo.png'}
-        width={32}
-        height={32}
-        className='object-contain'
-      />
+      <a href="/" className='block w-fit h-fit'>
+        <Image
+          alt='Dicoding Indonesia'
+          src={'/new-ui-logo.png'}
+          width={32}
+          height={32}
+          className='object-contain'
+        />
+      </a>
 
       <button
         name='Button Menu'
@@ -40,7 +42,7 @@ const NavbarMobile = () => {
         <div className='w-[24px] h-[2px] bg-primary group-focus-within:rotate-[350deg] transition-all duration-500'></div>
       </button>
 
-      <div className={clsx('fixed top-0 right-0 z-50 w-full h-[500px] bg-white transition-all duration-300', {
+      <div className={clsx('fixed top-0 right-0 z-50 w-full h-screen bg-white transition-all duration-300 overflow-y-hidden', {
         '-translate-y-[100%] opacity-50': !isOpen,
         'translate-y-0 opacity-100': isOpen,
       })}>
@@ -58,13 +60,16 @@ const NavbarMobile = () => {
 
         <div className='flex justify-center w-full bg-gray-50 gap-4 p-6'>
           <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold'>Masuk</Button>
-          <Button size={'lg'} className='text-[1rem] font-bold'>Daftar</Button>
+          <a href="https://www.dicoding.com/registration" target='_blank' className='block w-fit h-fit'>
+            <Button size={'lg'} className='text-[1rem] font-bold'>Daftar</Button>
+          </a>
         </div>
 
         <ul>
           <li>
             <Link
-              href='#'
+              href='https://www.dicoding.com/learningpaths/7'
+              target='_blank'
               className='flex justify-between py-4 px-6 w-full text-base text-primary-text font-bold hover:underline '>
               Learning Path
               <MoveUpRight className='w-4 h-4 text-gray-400' />
@@ -80,7 +85,8 @@ const NavbarMobile = () => {
                   className='px-6 w-full text-base text-primary-text'
                 >
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/subscriptions/purchases"
+                    target='_blank'
                     className='flex items-center py-4 hover:bg-gray-200'
                   >
                     <CreditCard className='w-4 h-4' />
@@ -90,7 +96,8 @@ const NavbarMobile = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/login"
+                    target='_blank'
                     className='flex items-center py-4 hover:bg-gray-200'
                   >
                     <CreditCard className='w-4 h-4' />
@@ -113,13 +120,15 @@ const NavbarMobile = () => {
                   className='px-6 w-full text-base text-primary-text'
                 >
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/bangun-negeri/university"
+                    target='_blank'
                     className='flex items-center py-4 hover:bg-gray-200 text-[.9rem]'
                   >
                     Dicoding Bangung Negeri Batch 7
                   </Link>
                   <Link
-                    href="#"
+                    href="https://aws.dicoding.com/"
+                    target='_blank'
                     className='flex items-center py-4 hover:bg-gray-200 text-[.9rem]'
                   >
                     AWS Back-End Academy 2024
@@ -138,7 +147,8 @@ const NavbarMobile = () => {
                   className='px-6 w-full text-base text-primary-text'
                 >
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/challenges"
+                    target='_blank'
                     className='flex items-center py-4 hover:bg-gray-200'
                   >
                     <Rocket className='w-4 h-4' />
@@ -148,7 +158,8 @@ const NavbarMobile = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://jobs.dicoding.com/"
+                    target='_blank'
                     className='flex items-center py-4 hover:bg-gray-200'
                   >
                     <Briefcase className='w-4 h-4' />
@@ -158,7 +169,8 @@ const NavbarMobile = () => {
                     </div>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.dicoding.com/events"
+                    target='_blank'
                     className='flex items-center py-4 hover:bg-gray-200'
                   >
                     <Calendar className='w-4 h-4' />
