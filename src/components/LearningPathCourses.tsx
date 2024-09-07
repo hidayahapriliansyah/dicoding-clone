@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight, Blocks, Users } from 'lucide-react'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Swiper as SwiperType } from 'swiper/types';
 import LearningPathCourseCard from './LearningPathCourseCard'
@@ -31,6 +31,12 @@ const LearningPathCourses = ({ selectedPath }: { selectedPath: LearningPaths }) 
   }
 
   const lp = displayLearningPath(selectedPath);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(0, 0);
+    }
+  }, [selectedPath]);
 
   return (
     <div

@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={quicksand.className}>
+      <body className={`${quicksand.className} overflow-x-hidden`}>
         <header className='w-full'>
           <NavbarMobile />
           <NavbarDesktop />

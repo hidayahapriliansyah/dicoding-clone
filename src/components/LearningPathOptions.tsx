@@ -10,10 +10,11 @@ import { Swiper as SwiperType } from 'swiper/types';
 import { learningPaths, LearningPaths } from '../data/learning-paths';
 import LearningPathCourses from './LearningPathCourses';
 import { LoadingImage } from './LoadingImage';
+import { useLearningPathCourse } from '../store/learning-path-course';
 
 const LearningPathOptions = () => {
   const swiperRef = useRef<SwiperType | null>(null);
-  const [path, setPath] = useState<LearningPaths>('android')
+  const { path, setPath } = useLearningPathCourse();
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
