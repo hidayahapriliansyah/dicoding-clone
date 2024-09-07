@@ -8,6 +8,8 @@ import { LoadingImage } from './LoadingImage';
 import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props';
 
 const ClientMarquee = () => {
+  const duplicatedClients = [...clients, ...clients, ...clients, ...clients];
+
   return (
     <div className='lg:hidden mt-8 w-full px-4'>
       <Swiper
@@ -23,33 +25,37 @@ const ClientMarquee = () => {
         loop={true}
         modules={[Autoplay, FreeMode]}
       >
-        {clients.map((client, i) => {
+        {duplicatedClients.map((client, i) => {
           if (i % 2 !== 0) return null;
           return (
             <SwiperSlide
               key={i}
-              className='w-fit max-w-[140px] sm:max-w-[160px] h-[60px]'
+              className="flex items-center justify-center" // Tambahkan class flex untuk pengaturan posisi elemen dalam slide
               style={{
-                marginLeft: i === 0 ? '' : '30px',
+                marginLeft: '20px',
+                width: 'fit-content',
+                height: 'fit-content',
               }}
             >
-              <div className='flex justify-center items-center w-full h-full mb-[30px] py-2 border border-gray-300 rounded-sm'>
+              <div className='flex justify-center items-center w-[141] h-[60px] mb-[30px] p-2 border rounded-sm'>
                 <LoadingImage
                   alt={client.title}
                   src={`/images/clients/${client.image}`}
                   placeholder={client.imgPlaceholder as PlaceholderValue}
                   width={109}
                   height={46}
+                  className='w-[109px] h-[46px]'
                 />
               </div>
-              {clients[i + 1] && (
-                <div className='flex justify-center items-center w-full h-full mb-[30px] py-2 border border-gray-300 rounded-sm'>
+              {duplicatedClients[i + 1] && (
+                <div className='flex justify-center items-center w-[141] h-[60px] mb-[30px] p-2 border border-gray-300 rounded-sm'>
                   <LoadingImage
-                    alt={clients[i + 1].title}
-                    src={`/images/clients/${clients[i + 1].image}`}
+                    alt={duplicatedClients[i + 1].title}
+                    src={`/images/clients/${duplicatedClients[i + 1].image}`}
                     placeholder={client.imgPlaceholder as PlaceholderValue}
                     width={109}
                     height={46}
+                    className='w-[109px] h-[46px]'
                   />
                 </div>
               )}

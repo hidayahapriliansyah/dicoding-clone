@@ -13,7 +13,13 @@ import { useReducer } from 'react'
  */
 
 //@ts-ignore
-export const LoadingImage: React.FC<LoadingImageProps> = ({ placeholder, ...props }) => {
+export const LoadingImage: React.FC<LoadingImageProps & { isPriority?: boolean }> = (
+  {
+    isPriority = false,
+    placeholder,
+    ...props
+  }
+) => {
   //@ts-ignore
   const [isLoading, stopLoading] = useReducer((_, ev) => (props.onLoad?.(ev), false), true)
 
@@ -23,17 +29,15 @@ export const LoadingImage: React.FC<LoadingImageProps> = ({ placeholder, ...prop
       {isLoading && placeholder &&
         <Image
           {...props}
+          priority={false}
           placeholder={undefined}
           src={placeholder}
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
           className={`${props.className} blur-lg`}
         />
       }
       <Image
         {...props}
+        priority={isPriority}
         className={`${props.className} ${isLoading && 'absolute invisible'}`}
         placeholder={undefined}
         onLoad={stopLoading}

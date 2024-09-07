@@ -22,7 +22,7 @@ const LearningPath = () => {
             alt='Image'
             width={204}
             height={40}
-            className='object-contain lg:mr-8 lg:w-[242px]'
+            className='object-contain lg:mr-8 w-auto lg:w-[242px] h-auto'
           />
           <LoadingImage
             src={'/images/google-cloud-partner.png'}
@@ -30,7 +30,7 @@ const LearningPath = () => {
             alt='Image'
             width={164}
             height={50}
-            className='object-contain lg:w-[198px]'
+            className='object-contain w-auto lg:w-[198px] h-auto'
           />
           <LoadingImage
             src={'/images/google-for-education-partner.jpg'}
@@ -38,7 +38,7 @@ const LearningPath = () => {
             alt='Image'
             width={180}
             height={50}
-            className='object-contain lg:w-[213px]'
+            className='object-contain w-auto lg:w-[213px] h-auto'
           />
         </div>
 
@@ -52,7 +52,7 @@ const LearningPath = () => {
               placeholder={clients[0].imgPlaceholder as PlaceholderValue}
               width={180}
               height={50}
-              className='object-contain p-8'
+              className='object-contain p-8 w-auto h-auto'
             />
           </div>
           <div
@@ -64,7 +64,7 @@ const LearningPath = () => {
               placeholder={clients[0].imgPlaceholder as PlaceholderValue}
               width={180}
               height={50}
-              className='object-contain p-8'
+              className='object-contain p-8 w-auto h-auto'
             />
           </div>
           <div
@@ -76,7 +76,7 @@ const LearningPath = () => {
               placeholder={clients[0].imgPlaceholder as PlaceholderValue}
               width={180}
               height={50}
-              className='object-contain p-8'
+              className='object-contain p-8 w-auto h-auto'
             />
           </div>
           <div
@@ -88,7 +88,7 @@ const LearningPath = () => {
               placeholder={clients[0].imgPlaceholder as PlaceholderValue}
               width={180}
               height={50}
-              className='object-contain p-8'
+              className='object-contain p-8 w-auto h-auto'
             />
           </div>
           <div
@@ -100,7 +100,7 @@ const LearningPath = () => {
               placeholder={clients[0].imgPlaceholder as PlaceholderValue}
               width={180}
               height={50}
-              className='object-contain p-8'
+              className='object-contain p-8 w-auto h-auto'
             />
           </div>
         </div>

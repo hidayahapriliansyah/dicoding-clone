@@ -38,6 +38,7 @@ const LearningPathCourseCard = ({
           src={`/images/courses/${imgUrl}`}
           alt={title}
           fill
+          sizes='100%'
           quality={80}
           className='absolute object-contain'
           placeholder={imgPlaceholder as PlaceholderValue}

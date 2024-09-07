@@ -23,7 +23,7 @@ const Clients = () => {
                 placeholder={client.imgPlaceholder as PlaceholderValue}
                 width={180}
                 height={50}
-                className='p-8'
+                className='p-8 w-auto h-auto'
               />
             </div>
           ))

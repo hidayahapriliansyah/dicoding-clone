@@ -8,6 +8,8 @@ import { Autoplay, FreeMode } from 'swiper/modules';
 import CourseCard from './CourseCard';
 
 const SwiperCourseMobile = () => {
+  const duplicatedCourses = [...courses, ...courses, ...courses, ...courses];
+
   return (
     <Swiper
       spaceBetween={16}
@@ -32,7 +34,7 @@ const SwiperCourseMobile = () => {
       className='w-full'
     >
       {
-        courses.map((course, i) => {
+        duplicatedCourses.map((course, i) => {
           if (i % 2 !== 0) return null;
 
           return (
@@ -48,12 +50,12 @@ const SwiperCourseMobile = () => {
               />
               <div className='my-4'></div>
               {
-                courses[i + 1] &&
+                duplicatedCourses[i + 1] &&
                 <CourseCard
-                  image={courses[i + 1].image}
-                  imgPlaceholder={courses[i + 1].imgPlaceholder}
-                  link={courses[i + 1].link}
-                  title={courses[i + 1].title}
+                  image={duplicatedCourses[i + 1].image}
+                  imgPlaceholder={duplicatedCourses[i + 1].imgPlaceholder}
+                  link={duplicatedCourses[i + 1].link}
+                  title={duplicatedCourses[i + 1].title}
                   shiftRight
                 />
               }

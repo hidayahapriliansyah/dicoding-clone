@@ -6,9 +6,9 @@ import { LoadingImage } from './LoadingImage'
 const Hero = () => {
   return (
     <section
-      className='mt-[180px] md:mt-[120px] lg:mt-[80px]'
+      className='mt-[180px] md:mt-[120px] lg:mt-[80px] w-full'
     >
-      <div className='flex flex-col-reverse md:flex-row mx-auto container h-[402px]'>
+      <div className='flex flex-col-reverse md:flex-row mx-auto container h-[402px] md:h-auto'>
         <div className='mx-auto w-full max-w-[510px] lg:max-w-full md:w-[40%] h-full pt-[48px] lg:pt-[100px] pb-[24px]'>
           <h2 className='text-[1.5rem] md:text-[1.65rem] lg:text-[2rem] tracking-tight lg:tracking-normal leading-tight text-primary-text font-medium mb-4'>Bangun Karirmu Sebagai Developer Profesional</h2>
           <p className='mb-5 md:mb-10'>Mulai belajar terarah dengan learning path</p>
@@ -24,7 +24,7 @@ const Hero = () => {
           <LoadingImage
             alt='Image'
             src={'/images/homepage-hero.png'}
-            priority
+            isPriority
             width="0"
             height="0"
             sizes="100vw"

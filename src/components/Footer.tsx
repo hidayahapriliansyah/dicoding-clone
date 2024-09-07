@@ -137,7 +137,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='lg:flex lg:justify-between lg:items-start mx-auto w-full max-w-[540px] md:max-w-[720px] lg:max-w-[1140px] text-[.85rem] font-light py-6 px-[15px]'>
+      <div className='lg:flex lg:justify-between lg:items-start mx-auto w-full max-w-[540px] md:max-w-[720px] lg:max-w-[1140px] text-[.85rem] font-light py-6'>
         <div className='text-center mb-4'>
           © 2024 Dicoding
           <span className='mx-2'>|</span>

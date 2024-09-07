@@ -28,7 +28,7 @@ const LearningPathOptionCard = ({ title, imgUrl, badge, path, selectedPath, imgP
         src={imgUrl}
         width={350}
         height={190}
-        className='absolute h-full object-cover object-bottom'
+        className='absolute h-full w-auto object-cover object-bottom'
         placeholder={imgPlaceholder as PlaceholderValue}
       />
       <LoadingImage
@@ -38,7 +38,7 @@ const LearningPathOptionCard = ({ title, imgUrl, badge, path, selectedPath, imgP
         width={48}
         height={48}
         quality={50}
-        className='absolute top-4 right-4'
+        className='absolute w-auto h-auto top-4 right-4'
       />
     </div>
   )

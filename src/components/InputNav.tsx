@@ -8,7 +8,6 @@ const InputNav = () => {
       <input
         type="text"
         name="cari-pelajaran"
-        id="cari-pelajaran"
         aria-label='Apa yang ingin Anda pelajari?'
         placeholder='Apa yang ingin Anda pelajari?'
         className='py-[6px] pl-[40px] pr-[6x] outline-none ring-0 w-full h-full focus:border focus:border-primary transition-all duration-300 rounded-[4px] border border-input font-medium text-[0.9rem] text-gray-950'

@@ -22,8 +22,10 @@ const TestimonyCard = ({
           alt={name}
           src={`/images/${image}`}
           fill
+          sizes='100%'
+          loading='lazy'
           placeholder={imgPlaceholder as PlaceholderValue}
-          className='object-cover object-top'
+          className='object-cover object-top w-auto h-auto'
         />
       </div>
       <div className='p-6 lg:p-12 w-full'>

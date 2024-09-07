@@ -23,8 +23,10 @@ const NewProgramCard = ({ description, image, imgPlaceholder, organizer, title, 
           alt={title}
           src={`/images/${image}`}
           placeholder={imgPlaceholder as PlaceholderValue}
-          fill
-          className='object-contain overflow-hidden'
+          sizes='100vw'
+          width="0"
+          height="0"
+          className='object-contain overflow-hidden w-full h-auto'
         />
       </a>
       <div className='w-full text-primary-text mb-6 md:mb-0'>

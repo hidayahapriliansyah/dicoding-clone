@@ -164,7 +164,7 @@ const LearningPathOptions = () => {
                 width={510}
                 height={384}
                 quality={50}
-                className='h-full object-cover object-left'
+                className='h-full w-auto object-cover object-left'
               />
             </div>
           </SwiperSlide>
