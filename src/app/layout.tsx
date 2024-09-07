@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: 'Dicoding Clone by Adi Muhamad Firmansyah',
     images: [
       {
-        url: 'https://dicoding-clone.vercel.app/og/dicoding-cover.jpeg',
+        url: 'https://dicoding-clone.vercel.app/og/dicoding_cover.jpeg',
         width: 1600,
         height: 900,
       },
