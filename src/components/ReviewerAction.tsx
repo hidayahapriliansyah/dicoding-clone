@@ -22,6 +22,7 @@ const ReviewerAction = () => {
         <Dialog>
           <DialogTrigger asChild>
             <button
+              className='block w-full'
               aria-label='reviewer_action_desktop'
             >
               <div
@@ -37,8 +38,8 @@ const ReviewerAction = () => {
                 />
                 <div className='absolute z-20 hidden lg:block w-[42%] text-white top-0 left-0 p-10'>
                   <SquareCode className='w-12 h-12 mb-6' />
-                  <h2 className='mb-6 text-2xl font-bold leading-tight'>Kenal lebih dekat dengan kami!</h2>
-                  <p className='mb-12 font-medium'>Sebagai <i>platform</i> edukasi teknologi, pengembangan <i>skill</i> para developer adalah fokus Dicoding. Untuk mencapainya, tersedia berbagai kelas <i>online</i>, program pelatihan, dan sertifikasi pemrograman dengan kualitas yang terjamin serta 2 layanan utama: Code Review & Forum Diskusi.</p>
+                  <h2 className='mb-6 text-2xl font-bold leading-tight text-left'>Kenal lebih dekat dengan kami!</h2>
+                  <p className='mb-8 xl:mb-12 font-medium text-left'>Sebagai <i>platform</i> edukasi teknologi, pengembangan <i>skill</i> para developer adalah fokus Dicoding. Untuk mencapainya, tersedia berbagai kelas <i>online</i>, program pelatihan, dan sertifikasi pemrograman dengan kualitas yang terjamin serta 2 layanan utama: Code Review & Forum Diskusi.</p>
                   <div className='flex items-center gap-2 font-bold'>
                     <CirclePlay />
                     Tonton video
