@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion"
 import clsx from 'clsx';
 import InputNav from './InputNav';
+import ButtonMasukDialog from './ButtonMasukDialog';
 
 
 const NavbarMobile = () => {
@@ -61,10 +62,7 @@ const NavbarMobile = () => {
         </div>
 
         <div className='flex justify-center w-full bg-gray-50 gap-4 p-6'>
-          <Button
-            variant={'outline'} size={'lg'} className='text-[1rem] font-bold rounded-[2px]'
-            aria-label='login-cta-nav-mobile'
-          >Masuk</Button>
+          <ButtonMasukDialog />
           <a href="https://www.dicoding.com/registration" target='_blank' className='block w-fit h-fit'>
             <Button
               size={'lg'}

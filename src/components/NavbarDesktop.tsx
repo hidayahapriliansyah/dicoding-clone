@@ -10,6 +10,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import { Briefcase, Calendar, CreditCard, Gift, MessageCircleCode, Rocket } from 'lucide-react'
+import ButtonMasukDialog from './ButtonMasukDialog'
 
 const NavbarDesktop = () => {
   return (
@@ -176,7 +177,7 @@ const NavbarDesktop = () => {
         </div>
 
         <div className='flex items-center gap-2'>
-          <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold rounded-[2px]'>Masuk</Button>
+          <ButtonMasukDialog />
           <a
             href="https://www.dicoding.com/registration"
             target='_blank'
