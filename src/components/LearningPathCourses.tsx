@@ -63,6 +63,7 @@ const LearningPathCourses = ({ selectedPath }: { selectedPath: LearningPaths }) 
             )}
             onClick={() => swiperRef.current?.slidePrev()}
             disabled={isBeginning}
+            aria-label='swipe-left-course-by-learning-path'
           >
             <ArrowLeft className='m-0 p-0' />
           </button>
@@ -76,6 +77,7 @@ const LearningPathCourses = ({ selectedPath }: { selectedPath: LearningPaths }) 
             )}
             onClick={() => swiperRef.current?.slideNext()}
             disabled={isEnd}
+            aria-label='swipe-right-course-by-learning-path'
           >
             <ArrowRight />
           </button>

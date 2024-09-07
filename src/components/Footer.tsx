@@ -25,34 +25,40 @@ const Footer = () => {
               <br />
               Jawa Barat 40123
             </p>
-            <dl className='text-primary-text text-xl'>
-              <dd className='flex items-center gap-8'>
+            <ul className='flex items-center gap-8 text-primary-text text-xl'>
+              <li>
                 <a
                   href="https://www.instagram.com/dicoding/"
                   target='_blank'
                 >
                   <AiFillInstagram />
                 </a>
+              </li>
+              <li>
                 <a
                   href="https://www.youtube.com/channel/UCM6BWkgiGrCHG967i_PyMiw"
                   target='_blank'
                 >
                   <FaYoutube />
                 </a>
+              </li>
+              <li>
                 <a
                   href="https://twitter.com/dicoding"
                   target='_blank'
                 >
                   <FaTwitter />
                 </a>
+              </li>
+              <li>
                 <a
                   href="https://www.facebook.com/dicoding"
                   target='_blank'
                 >
                   <FaFacebookF />
                 </a>
-              </dd>
-            </dl>
+              </li>
+            </ul>
 
             <p className='mt-12 text-primary-text'>
               <b>Penghargaan</b>
@@ -68,13 +74,13 @@ const Footer = () => {
         </div>
         <div className='flex flex-wrap md:flex-nowrap md:gap-8 py-12 px-4 mx-auto w-full max-w-[540px] md:max-w-[480px] lg:max-w-[760px]'>
           <div className='w-full mb-4 md:ml-8'>
-            <dl>
+            <div>
               <p className='font-bold mb-4 md:text-2xl md:leading-relaxed'>
                 Decode Ideas
                 <br />
                 Discover Potential
               </p>
-              <dd className='mb-2'>
+              <div className='mb-2'>
                 <a
                   href="https://www.dicoding.com/about"
                   target='_blank'
@@ -82,58 +88,58 @@ const Footer = () => {
                 >
                   <h6>Tentang Kami</h6>
                 </a>
-              </dd>
-            </dl>
+              </div>
+            </div>
           </div>
           <div className='text-sm md:text-[.9rem] w-[50%] md:max-w-full text-primary-text'>
-            <dl className='flex flex-col gap-3 my-4'>
-              <dd>
+            <ul className='flex flex-col gap-3 my-4'>
+              <li>
                 <a
                   href="https://www.dicoding.com/blog/"
                   target='_blank'
                   className='hover:underline'
                 >Blog</a>
-              </dd>
-              <dd>
+              </li>
+              <li>
                 <a
                   href="https://www.dicoding.com/rewards"
                   target='_blank'
                   className='hover:underline'
                 >Reward</a>
-              </dd>
-              <dd>
+              </li>
+              <li>
                 <a
                   href="https://www.dicoding.com/showcases"
                   target='_blank'
                   className='hover:underline'
                 >Showcase</a>
-              </dd>
-              <dd>
+              </li>
+              <li>
                 <a
                   href="https://www.dicoding.com/elite"
                   target='_blank'
                   className='hover:underline'
                 >Dicoding Elite</a>
-              </dd>
-            </dl>
+              </li>
+            </ul>
           </div>
           <div className='text-sm md:text-[.9rem] w-[50%]  md:max-w-full'>
-            <dl className='flex flex-col gap-3 my-4 text-primary-text'>
-              <dd>
+            <ul className='flex flex-col gap-3 my-4 text-primary-text'>
+              <li>
                 <a
                   href="https://www.dicoding.com/contact-us"
                   target='_blank'
                   className='hover:underline'
                 >Hubungi Kami</a>
-              </dd>
-              <dd>
+              </li>
+              <li>
                 <a
                   href="https://help.dicoding.com/"
                   target='_blank'
                   className='hover:underline'
                 >FAQ</a>
-              </dd>
-            </dl>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -149,7 +155,7 @@ const Footer = () => {
           <a href="#">Privacy</a>
         </div>
       </div>
-    </footer>
+    </footer >
   )
 }
 

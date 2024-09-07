@@ -21,12 +21,14 @@ const TestimoniSiswa = () => {
             <button
               className='flex justify-center items-center text-primary-text p-[1px] w-8 h-8 border-2 border-primary-text rounded-full'
               onClick={() => swiperRef.current?.slidePrev()}
+              aria-label='swipe-left-testimony'
             >
               <ArrowLeft className='m-0 p-0' />
             </button>
             <button
               className='flex justify-center items-center text-primary-text p-[1px] w-8 h-8 border-2 border-primary-text rounded-full'
               onClick={() => swiperRef.current?.slideNext()}
+              aria-label='swipe-right-testimony'
             >
               <ArrowRight />
             </button>

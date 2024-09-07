@@ -36,6 +36,7 @@ const NavbarMobile = () => {
         name='Button Menu'
         className='flex flex-col justify-center items-center gap-1 w-[58px] h-[50px] py-2 px-4 hover:bg-black/10 rounded-[2px] group'
         onClick={() => setIsOpen((prev) => !prev)}
+        aria-label='btn-burger-nav'
       >
         <div className='w-[24px] h-[2px] bg-primary group-focus-within:rotate-[350deg] transition-all duration-500'></div>
         <div className='w-[24px] h-[2px] bg-primary group-focus-within:rotate-[350deg] transition-all duration-500'></div>
@@ -53,15 +54,23 @@ const NavbarMobile = () => {
 
           <button
             onClick={() => setIsOpen((prev) => !prev)}
+            aria-label='btn-burger-nav-close'
           >
             <X />
           </button>
         </div>
 
         <div className='flex justify-center w-full bg-gray-50 gap-4 p-6'>
-          <Button variant={'outline'} size={'lg'} className='text-[1rem] font-bold rounded-[2px]'>Masuk</Button>
+          <Button
+            variant={'outline'} size={'lg'} className='text-[1rem] font-bold rounded-[2px]'
+            aria-label='login-cta-nav-mobile'
+          >Masuk</Button>
           <a href="https://www.dicoding.com/registration" target='_blank' className='block w-fit h-fit'>
-            <Button size={'lg'} className='text-[1rem] font-bold rounded-[2px]'>Daftar</Button>
+            <Button
+              size={'lg'}
+              className='text-[1rem] font-bold rounded-[2px]'
+              aria-label='register-cta-nav-mobile'
+            >Daftar</Button>
           </a>
         </div>
 

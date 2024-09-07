@@ -34,6 +34,7 @@ const CustomSlider: FC = () => {
           })}
           onClick={() => swiperRef.current?.slidePrev()}
           disabled={isBeginning}
+          aria-label='swipe-left-newest-program'
         >
           <ArrowLeft className='m-0 p-0' />
         </button>
@@ -44,6 +45,7 @@ const CustomSlider: FC = () => {
           })}
           onClick={() => swiperRef.current?.slideNext()}
           disabled={isEnd}
+          aria-label='swipe-right-newest-program'
         >
           <ArrowRight />
         </button>
